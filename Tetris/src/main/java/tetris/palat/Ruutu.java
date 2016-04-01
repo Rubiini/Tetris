@@ -90,7 +90,7 @@ public abstract class Ruutu implements Palat {
      */
     
     public int liikuYlos() {
-        return y++;
+        return y--;
     }
     
     /**
@@ -99,7 +99,7 @@ public abstract class Ruutu implements Palat {
      */
     
     public int liikuAlas() {
-        return y--;
+        return y++;
     }
     
     /**
@@ -120,7 +120,9 @@ public abstract class Ruutu implements Palat {
         return x++;
     }
     
+    
     public void kaannaVasen() {
+        
         
     }
     

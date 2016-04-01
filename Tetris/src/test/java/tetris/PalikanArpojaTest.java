@@ -37,8 +37,4 @@ public class PalikanArpojaTest {
         assertTrue(arpoja.haePala(1) instanceof SPala);
     }
 
-    @Test
-    public void arvoPala() {
-        assertEquals(arpoja, this);
-    }
 }

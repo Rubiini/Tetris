@@ -11,3 +11,6 @@ Pelaaja
 * pelin lopettaminen
 * palikoiden liikuttaminen leveys-suunnassa
 * palikoiden pyörittely
+
+## Luokkakaavio
+![Luokkakaavio](/Luokkakaavio.2.deadline.jpg "Luokkakaavio")

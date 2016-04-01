@@ -6,5 +6,5 @@ Tetris. Peli, jossa on tarkoituksena ker‰t‰ pisteit‰ muodostamalla putoavista pa
 Pelaaja voi liikuttaa palikoita k‰‰nt‰m‰ll‰, sek‰ liikuttamalla vasemmalle tai oikealle nuolin‰pp‰imill‰.
 
 ## Dokumentaatio
-[aiheen kuvaus](Dokumentation/aiheenKuvausJaM‰‰ritelm‰.md)
+[aiheen kuvaus](Dokumentation/aiheenKuvausJaRakenne.md)
 [tunti kirjanpito](Dokumentation/tuntikirjanpito.md)

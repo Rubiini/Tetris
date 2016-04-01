@@ -77,7 +77,20 @@ public class Logiikka {
         palat.liikuYlos();
     }
 
+    /**
+     * Kääntää palan vasempaan
+     */
     
+    public void kaannaVasemmalle() {
+        palat.kaannaVasen();
+    }
     
+    /**
+     * Kääntä palan oikeaan
+     */
+    
+    public void kaannaOikealle() {
+        palat.kaannaOikea();
+    }
     
 }

@@ -49,6 +49,12 @@ public class PalikanArpoja {
         
     }
     
+    /**
+     * 
+     * @param x
+     * @return 
+     */
+    
     public Ruutu haePala(int x) {
         return palat.get(x).get();
     }

@@ -6,8 +6,7 @@ import java.awt.Color;
  *
  * @author samukaup
  */
-public class Pelialusta extends Ruutu{
-
+public class Pelialusta extends Ruutu {
 
     /**
      *

@@ -13,4 +13,4 @@ Pelaaja
 * palikoiden pyörittely
 
 ## Luokkakaavio
-![Luokkakaavio](/Luokkakaavio.2.deadline.jpg "Luokkakaavio")
+![Luokkakaavio](/Documentation/Luokkakaavio.2.deadline.jpg "Luokkakaavio")

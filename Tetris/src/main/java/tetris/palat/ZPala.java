@@ -26,10 +26,9 @@ public class ZPala extends Ruutu {
      */
     public ZPala(int x, int y) {
         this(x, y, new int[][]{
-            {0, 0, 0, 0},
-            {1, 1, 0, 0},
-            {0, 1, 1, 0},
-            {0, 0, 0, 0}
+            {0, 0, 0},
+            {1, 1, 0},
+            {0, 1, 1}
         });
         Color color = Color.GREEN;
     }

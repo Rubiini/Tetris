@@ -82,8 +82,6 @@ public abstract class Ruutu implements Palat {
         this.palikka = palikka;
     }
     
-    
-    
     /**
      * 
      * @return 
@@ -121,13 +119,16 @@ public abstract class Ruutu implements Palat {
     }
     
     
-    public void kaannaVasen() {
+    public void kaanna() {
+        final int korkeus = palikka.length;
+        final int leveys = palikka[0].length;
+        int [][] uusiPalikka = new int[leveys][korkeus];
         
-        
-    }
-    
-    public void kaannaOikea(){
-        
-    }
-    
+        for (int y = 0; y < korkeus; y++) {
+            for (int x = 0; x < leveys; x++) {
+                uusiPalikka[x][korkeus - 1 - y] = palikka[y][x];
+            }
+        }
+        this.palikka = uusiPalikka;
+    }   
 }

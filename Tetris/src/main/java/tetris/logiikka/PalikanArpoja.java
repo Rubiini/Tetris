@@ -29,13 +29,13 @@ public class PalikanArpoja {
     public PalikanArpoja() {
         random = new Random();
         palat = new HashMap<>();
-        palat.put(0, () -> new TPala(0, 0));
-        palat.put(1, () -> new SPala(0, 0));
-        palat.put(2, () -> new ZPala(0, 0));
-        palat.put(3, () -> new OPala(0, 0));
-        palat.put(4, () -> new IPala(0, 0));
-        palat.put(5, () -> new JPala(0, 0));
-        palat.put(6, () -> new LPala(0, 0));
+        palat.put(0, () -> new TPala(4, 0));
+        palat.put(1, () -> new SPala(4, 0));
+        palat.put(2, () -> new ZPala(4, 0));
+        palat.put(3, () -> new OPala(4, 0));
+        palat.put(4, () -> new IPala(4, 0));
+        palat.put(5, () -> new JPala(4, 0));
+        palat.put(6, () -> new LPala(4, 0));
     }
     
     /**

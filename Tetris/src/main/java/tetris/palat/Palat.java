@@ -6,9 +6,7 @@ package tetris.palat;
  */
 public interface Palat {
     
-    public void kaannaVasen();
-    
-    public void kaannaOikea();
+    public void kaanna();
     
     public int[][] getPalikka();
     

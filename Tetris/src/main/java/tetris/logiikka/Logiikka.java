@@ -76,21 +76,13 @@ public class Logiikka {
     public void liikutaYlos() {
         palat.liikuYlos();
     }
-
-    /**
-     * Kääntää palan vasempaan
-     */
-    
-    public void kaannaVasemmalle() {
-        palat.kaannaVasen();
-    }
     
     /**
-     * Kääntä palan oikeaan
+     * Kääntää palan
      */
     
-    public void kaannaOikealle() {
-        palat.kaannaOikea();
+    public void kaanna() {
+        palat.kaanna();
     }
     
 }

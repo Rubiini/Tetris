@@ -26,10 +26,8 @@ public class OPala extends Ruutu {
      */
     public OPala(int x, int y) {
         this(x, y, new int[][]{
-            {0, 0, 0, 0},
-            {0, 1, 1, 0},
-            {0, 1, 1, 0},
-            {0, 0, 0, 0}
+            {1, 1},
+            {1, 1}
         });
         Color color = Color.YELLOW;
     }

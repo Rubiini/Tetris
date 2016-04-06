@@ -45,8 +45,7 @@ public class PalikanArpoja {
     
     public Ruutu arvoPala() {
         int luku = random.nextInt(6);
-        return haePala(luku);
-        
+        return haePala(luku);       
     }
     
     /**
@@ -57,6 +56,5 @@ public class PalikanArpoja {
     
     public Ruutu haePala(int x) {
         return palat.get(x).get();
-    }
-    
+    }   
 }

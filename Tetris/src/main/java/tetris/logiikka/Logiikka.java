@@ -33,7 +33,6 @@ public class Logiikka {
     
     public Logiikka() {
         arpoja = new PalikanArpoja();
-        pelialusta = new Pelialusta(0, 0);
         palat = arpoja.arvoPala();
     }
     

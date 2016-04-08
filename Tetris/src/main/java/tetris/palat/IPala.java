@@ -32,11 +32,12 @@ public class IPala extends Ruutu {
     public IPala(int x, int y) {
         this(x, y, new int[][]{
             {0, 0, 0, 0},
-            {1, 1, 1, 1},
+            {2, 2, 2, 2},
             {0, 0, 0, 0},
             {0, 0, 0, 0}
         });
         Color color = Color.MAGENTA;
     }
 
+    
 }

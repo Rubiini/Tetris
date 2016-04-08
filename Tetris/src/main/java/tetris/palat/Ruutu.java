@@ -55,6 +55,9 @@ public abstract class Ruutu implements Palat {
         return y;
     }
 
+    public int getKoordinaatti(int x, int y) {
+        return palikka[y][x];
+    }
     /**
      * 
      * @param y 
@@ -117,6 +120,8 @@ public abstract class Ruutu implements Palat {
     public int liikuOikealle() {
         return x++;
     }
+    
+    
     
     
     public void kaanna() {

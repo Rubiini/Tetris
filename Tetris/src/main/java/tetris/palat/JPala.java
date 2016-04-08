@@ -28,9 +28,10 @@ public class JPala extends Ruutu {
     
     public JPala(int x, int y) {
         this(x, y, new int[][]{
-            {0, 1, 0},
-            {0, 1, 0},
-            {1, 1, 0}
+            {0, 3, 0, 0},
+            {0, 3, 0, 0},
+            {3, 3, 0, 0},
+            {0, 0, 0, 0}
         });
         Color color = Color.BLUE;
     }

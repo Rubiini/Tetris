@@ -26,9 +26,10 @@ public class SPala extends Ruutu {
      */
     public SPala(int x, int y) {
         this(x, y, new int[][]{
-            {0, 0, 0},
-            {0, 1, 1},
-            {1, 1, 0}
+            {0, 0, 0, 0},
+            {0, 8, 8, 0},
+            {8, 8, 0, 0},
+            {0, 0, 0, 0}
         });
         Color color = Color.ORANGE;
     }

@@ -26,9 +26,10 @@ public class TPala extends Ruutu {
      */
     public TPala(int x, int y) {
         this(x, y, new int[][]{
-            {0, 0, 0},
-            {1, 1, 1},
-            {0, 1, 0}
+            {0, 0, 0, 0},
+            {5, 5, 5, 0},
+            {0, 5, 0, 0},
+            {0, 0, 0, 0}
         });
         Color color = Color.CYAN;
     }

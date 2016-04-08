@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package tetris.logiikka;
 
 import tetris.palat.Palat;
@@ -12,76 +11,93 @@ import tetris.palat.Ruutu;
 
 /**
  * Vastaa pelin logiikasta.
+ *
  * @author samukaup
  */
 public class Logiikka {
-    
+
     /**
      * Arpoo ja luo uuden kuvion.
      */
     private PalikanArpoja arpoja;
-    
+
     /**
      * Luo pelialustan.
      */
     private Pelialusta pelialusta;
 
     /**
-     * Kontroloi palaa.
+     *
      */
-    private Palat palat;
-    
+    private Ruutu palikka;
+
     public Logiikka() {
+        pelialusta = new Pelialusta(10, 20);
         arpoja = new PalikanArpoja();
-        palat = arpoja.arvoPala();
+        palikka = arpoja.arvoPala();
     }
-    
+
     /**
-     * 
-     * @param palat 
+     *
+     * @param palat
      */
     public void setPalat(Ruutu palat) {
-        this.palat = palat;
+        this.palikka = palat;
     }
-    
+
     /**
      * Liikuttaa palaa oikealle
      */
-    
     public void liikutaOikealle() {
-        palat.liikuOikealle();
+        palikka.liikuOikealle();
     }
-    
+
     /**
      * Liikuttaa palaa vasemmalle
      */
-    
     public void liikutaVasemmalle() {
-        palat.liikuVasemmalle();
+        palikka.liikuVasemmalle();
     }
-    
+
     /**
      * Liikuttaa palaa alas
      */
-    
     public void liikutaAlas() {
-        palat.liikuAlas();
+        palikka.liikuAlas();
     }
-    
+
     /**
      * Liikuttaa palaa ylös
      */
-    
     public void liikutaYlos() {
-        palat.liikuYlos();
+        palikka.liikuYlos();
     }
-    
+
     /**
      * Kääntää palan
      */
-    
     public void kaanna() {
-        palat.kaanna();
+        palikka.kaanna();
     }
-    
+
+    public void lisaaPalaPelialustaan() {
+
+    }
+
+    public boolean tormaakoPelialustaan() {
+        pelialusta.liikuAlas();
+        int ruutu;
+        for (int y = 0; y < 3; y++) {
+            for (int x = 0; x < 3; x++) {
+                ruutu = palikka.getKoordinaatti(y, x);
+                
+                if (ruutu > 1) {
+                    
+                }
+            }
+
+        }
+        return false;
+    }
+
 }

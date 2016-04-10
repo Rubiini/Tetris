@@ -29,15 +29,15 @@ public final class ShapeCreator {
      * @return 
      */
     protected List<Shape> createAllShapes() {
-        List<Shape> pieceList = new ArrayList<Shape>();
-        pieceList.add(blockI());
-        pieceList.add(blockO());
-        pieceList.add(blockS());
-        pieceList.add(blockZ());
-        pieceList.add(blockL());
-        pieceList.add(blockJ());
-        pieceList.add(blockT());
-        return pieceList;
+        List<Shape> shapeList = new ArrayList<Shape>();
+        shapeList.add(blockI());
+        shapeList.add(blockO());
+        shapeList.add(blockS());
+        shapeList.add(blockZ());
+        shapeList.add(blockL());
+        shapeList.add(blockJ());
+        shapeList.add(blockT());
+        return shapeList;
     }
     
     /**

@@ -13,7 +13,7 @@ public class Block {
     private int x;
     private int y;
 
-    public Block(int x, int y) {
+    public Block(int y, int x) {
         this.x = x;
         this.y = y;
     }

@@ -53,9 +53,6 @@ public class Shape {
     }
     
     public void rotate() {
-        for (Block block : list) {
-            
-        }
     }
     /*public String toString() {
         Block block = new Block(0, 0);

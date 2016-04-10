@@ -6,17 +6,16 @@ import java.awt.Color;
  *
  * @author samukaup
  */
-public class JPala extends Ruutu {
+public class JPala extends Palikka {
 
     /**
      *
-     * @param x
      * @param y
+     * @param x
      * @param palikka
      */
-    
-    public JPala(int x, int y, int[][] palikka) {
-        super(x, y, palikka);
+    public JPala(int y, int x, int[][] palikka) {
+        super(y, x, palikka);
         Color color = Color.BLUE;
     }
 
@@ -25,12 +24,11 @@ public class JPala extends Ruutu {
      * @param x
      * @param y
      */
-    
-    public JPala(int x, int y) {
-        this(x, y, new int[][]{
-            {0, 3, 0, 0},
-            {0, 3, 0, 0},
-            {3, 3, 0, 0},
+    public JPala(int y, int x) {
+        this(y, x, new int[][]{
+            {3, 0, 0, 0},
+            {3, 3, 3, 0},
+            {0, 0, 0, 0},
             {0, 0, 0, 0}
         });
         Color color = Color.BLUE;

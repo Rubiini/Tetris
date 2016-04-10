@@ -6,16 +6,16 @@ import java.awt.Color;
  *
  * @author samukaup
  */
-public class LPala extends Ruutu {
+public class LPala extends Palikka {
 
     /**
      *
-     * @param x
      * @param y
+     * @param x
      * @param palikka
      */
-    public LPala(int x, int y, int[][] palikka) {
-        super(x, y, palikka);
+    public LPala(int y, int x, int[][] palikka) {
+        super(y, x, palikka);
         Color color = Color.RED;
     }
 
@@ -24,11 +24,11 @@ public class LPala extends Ruutu {
      * @param x
      * @param y
      */
-    public LPala(int x, int y) {
-        this(x, y, new int[][]{
-            {0, 4, 0, 0},
-            {0, 4, 0, 0},
-            {0, 4, 4, 0},
+    public LPala(int y, int x) {
+        this(y, x, new int[][]{
+            {0, 0, 0, 0},
+            {4, 4, 4, 0},
+            {4, 0, 0, 0},
             {0, 0, 0, 0}
         });
         Color color = Color.RED;

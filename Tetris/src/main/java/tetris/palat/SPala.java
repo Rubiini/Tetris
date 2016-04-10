@@ -6,16 +6,16 @@ import java.awt.Color;
  *
  * @author samukaup
  */
-public class SPala extends Ruutu {
+public class SPala extends Palikka {
 
     /**
      *
-     * @param x
      * @param y
+     * @param x
      * @param palikka
      */
-    public SPala(int x, int y, int[][] palikka) {
-        super(x, y, palikka);
+    public SPala(int y, int x, int[][] palikka) {
+        super(y, x, palikka);
         Color color = Color.ORANGE;
     }
 
@@ -24,8 +24,8 @@ public class SPala extends Ruutu {
      * @param x
      * @param y
      */
-    public SPala(int x, int y) {
-        this(x, y, new int[][]{
+    public SPala(int y, int x) {
+        this(y, x, new int[][]{
             {0, 0, 0, 0},
             {0, 8, 8, 0},
             {8, 8, 0, 0},

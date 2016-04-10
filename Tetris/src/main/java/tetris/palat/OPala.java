@@ -6,16 +6,16 @@ import java.awt.Color;
  *
  * @author samukaup
  */
-public class OPala extends Ruutu {
+public class OPala extends Palikka {
 
     /**
      *
-     * @param x
      * @param y
+     * @param x
      * @param palikka
      */
-    public OPala(int x, int y, int[][] palikka) {
-        super(x, y, palikka);
+    public OPala(int y, int x, int[][] palikka) {
+        super(y, x, palikka);
         Color color = Color.YELLOW;
     }
 
@@ -24,8 +24,8 @@ public class OPala extends Ruutu {
      * @param x
      * @param y
      */
-    public OPala(int x, int y) {
-        this(x, y, new int[][]{
+    public OPala(int y, int x) {
+        this(y, x, new int[][]{
             {0, 0, 0, 0},
             {0, 7, 7, 0},
             {0, 7, 7, 0},

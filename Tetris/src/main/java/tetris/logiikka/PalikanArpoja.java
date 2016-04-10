@@ -13,7 +13,7 @@ import tetris.palat.IPala;
 import tetris.palat.JPala;
 import tetris.palat.LPala;
 import tetris.palat.OPala;
-import tetris.palat.Ruutu;
+import tetris.palat.Palikka;
 import tetris.palat.SPala;
 import tetris.palat.TPala;
 import tetris.palat.ZPala;
@@ -24,7 +24,7 @@ import tetris.palat.ZPala;
  */
 public class PalikanArpoja {
     private Random random;
-    private HashMap<Integer, Supplier<Ruutu>> palat;
+    private HashMap<Integer, Supplier<Palikka>> palat;
 
     public PalikanArpoja() {
         random = new Random();
@@ -43,7 +43,7 @@ public class PalikanArpoja {
      * @return 
      */
     
-    public Ruutu arvoPala() {
+    public Palikka arvoPala() {
         int luku = random.nextInt(6);
         return haePala(luku);       
     }
@@ -54,7 +54,7 @@ public class PalikanArpoja {
      * @return 
      */
     
-    public Ruutu haePala(int x) {
+    public Palikka haePala(int x) {
         return palat.get(x).get();
     }   
 }

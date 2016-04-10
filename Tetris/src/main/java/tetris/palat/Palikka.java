@@ -6,7 +6,7 @@ import java.awt.Color;
  * Pelialusta ja palat koostuvat ruuduista.
  * @author samukaup
  */
-public abstract class Ruutu implements Palat {
+public abstract class Palikka implements Palat {
     
     private int x;
     private int y;
@@ -21,13 +21,36 @@ public abstract class Ruutu implements Palat {
      * @param vari 
      */
     
-    public Ruutu(int x, int y, int[][] palikka) {
+    public Palikka(int y, int x, int[][] palikka) {
         this.x = x;
         this.y = y;
         this.palikka = palikka;
         this.vari = Color.BLACK;
     }
 
+    /**
+     * 
+     * @return 
+     */
+    
+    public int getKiintopiste() {
+        return palikka[1][1];
+    }
+    
+    /**
+     * 
+     * @param x
+     * @param y
+     * @return 
+     */
+    
+    public int getKoordinaatti(int y, int x) {
+        return palikka[y][x];
+    }
+    
+    public void setKoordinaatti(int y, int x, int luku) {
+        palikka[y][x] = luku;
+    }
     /**
      * 
      * @return 
@@ -55,9 +78,7 @@ public abstract class Ruutu implements Palat {
         return y;
     }
 
-    public int getKoordinaatti(int x, int y) {
-        return palikka[y][x];
-    }
+    
     /**
      * 
      * @param y 
@@ -123,12 +144,10 @@ public abstract class Ruutu implements Palat {
     
     
     
-    
     public void kaanna() {
         final int korkeus = palikka.length;
         final int leveys = palikka[0].length;
         int [][] uusiPalikka = new int[leveys][korkeus];
-        
         for (int y = 0; y < korkeus; y++) {
             for (int x = 0; x < leveys; x++) {
                 uusiPalikka[x][korkeus - 1 - y] = palikka[y][x];

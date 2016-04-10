@@ -14,6 +14,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import tetris.logiikka.PalikanArpoja;
 import tetris.palat.Palat;
+import tetris.palat.Pelialusta;
 
 /**
  *
@@ -22,9 +23,11 @@ import tetris.palat.Palat;
 public class LogiikkaTest {
     private Palat palat;
     private PalikanArpoja arpoja;
+    private Pelialusta pelialusta;
     
     @Before
     public void setUp() {
+        pelialusta = new Pelialusta(0 ,0);
         arpoja = new PalikanArpoja();
         palat = arpoja.arvoPala();
     }
@@ -61,4 +64,33 @@ public class LogiikkaTest {
         assertEquals(luku - 1, palat.getY());
     }
     
+    @Test
+    public void palauttaakoTormaysVasempaanSeinaanTrueOikein() {
+        
+    }
+    
+    @Test
+    public void palauttaakoTormaysVasempaanSeinaanFalseOikein() {
+        
+    }
+    
+    @Test
+    public void palauttaakoTormaysOikeaanSeinaanTrueOikein() {
+        
+    }
+    
+    @Test
+    public void palauttaakoTormaysOikeaanSeinaanFalseOikein() {
+        
+    }
+    
+    @Test
+    public void palauttaakoTormaysLattiaanTrueOikein() {
+        
+    }
+    
+    @Test
+    public void palauttaakoTormaysLattiaanFalseOikein() {
+        
+    }
 }

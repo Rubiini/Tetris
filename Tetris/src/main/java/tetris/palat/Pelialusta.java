@@ -7,7 +7,7 @@ import tetris.logiikka.PalikanArpoja;
  *
  * @author samukaup
  */
-public class Pelialusta extends Ruutu{
+public class Pelialusta extends Palikka{
 
     /**
      *
@@ -15,8 +15,8 @@ public class Pelialusta extends Ruutu{
      * @param y
      * @param palikka
      */
-    public Pelialusta(int x, int y, int[][] palikka) {
-     super(x, y, palikka);
+    public Pelialusta(int y, int x, int[][] palikka) {
+     super(y, x, palikka);
      Color color = Color.BLACK;
      }
 
@@ -25,9 +25,8 @@ public class Pelialusta extends Ruutu{
      * @param x
      * @param y
      */
-    public Pelialusta(int x, int y) {
-     this(x, y, new int[][]{
-     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    public Pelialusta(int y, int x) {
+     this(y, x, new int[][]{
      {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
      {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
      {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
@@ -48,7 +47,8 @@ public class Pelialusta extends Ruutu{
      {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
      {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
      {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+     {0, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 0}
+             
      
      });
      Color color = Color.BLACK;

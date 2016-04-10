@@ -12,7 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import tetris.logiikka.PalikanArpoja;
-import tetris.palat.Ruutu;
+import tetris.palat.Palikka;
 import tetris.palat.SPala;
 
 /**
@@ -29,7 +29,7 @@ public class PalikanArpojaTest {
     
     @Test
     public void arvoPalaOsaaPalauttaaPalanOikein() {
-        assertTrue(arpoja.arvoPala() instanceof Ruutu);
+        assertTrue(arpoja.arvoPala() instanceof Palikka);
     }
     
     @Test

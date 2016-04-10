@@ -16,7 +16,6 @@ import static org.junit.Assert.*;
 public class ShapeCreatorTest {
     
     private ShapeCreator creator;
-    private Shape shape;
     
     @Before
     public void setUp() {
@@ -36,13 +35,36 @@ public class ShapeCreatorTest {
     
     @Test
     public void blockIWorksCorrectly() {
-        List<Block> list1 = new ArrayList<>();
-        Shape shape = creator.blockI();
-        list1.add(new Block(0, 0));
-        list1.add(new Block(0, 1));
-        list1.add(new Block(0, 2));
-        list1.add(new Block(0, 3));
-        
-        assertEquals(new Shape(list1), shape);
+        assertTrue(creator.blockI() instanceof Shape);
+    }
+    
+    @Test
+    public void blockOWorksCorrectly() {
+        assertTrue(creator.blockO() instanceof Shape);
+    }
+    
+    @Test
+    public void blockSWorksCorrectly() {
+        assertTrue(creator.blockS() instanceof Shape);
+    }
+    
+    @Test
+    public void blockZWorksCorrectly() {
+        assertTrue(creator.blockZ() instanceof Shape);
+    }
+    
+    @Test
+    public void blockLWorksCorrectly() {
+        assertTrue(creator.blockL() instanceof Shape);
+    }
+    
+    @Test
+    public void blockJWorksCorrectly() {
+        assertTrue(creator.blockJ() instanceof Shape);
+    }
+    
+    @Test
+    public void blockTWorksCorrectly() {
+        assertTrue(creator.blockT() instanceof Shape);
     }
 }

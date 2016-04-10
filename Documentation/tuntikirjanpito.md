@@ -8,6 +8,5 @@ PÃ¤ivÃ¤ | Tunnit | Kuvaus
 06.04.2016 | 1h | Koodausta
 08.04.2016 | 8h | Koodausta ja hajoilua...
 09.04.2016 | 10h | Koodausta ja lisää hajoilua... 
-10.04.2016 | 10h | Koodausta uudesta näkökulmasta, koska aikaisempi ei vain todellakaan luonnistunut. Nyt luonnistuu paremmin
-dokumentointia sekä luokkakaavio.
+10.04.2016 | 10h | Koodausta uudesta näkökulmasta, koska aikaisempi ei vain todellakaan luonnistunut. Nyt luonnistuu paremmin dokumentointia.
 

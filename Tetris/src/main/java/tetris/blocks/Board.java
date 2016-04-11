@@ -5,7 +5,7 @@ package tetris.blocks;
  * @author Rubiini
  */
 public class Board {
-    
+
     private final int[][] boardMatrix;
     private int height;
     private int width;
@@ -17,16 +17,16 @@ public class Board {
         this.curX = x;
         this.boardMatrix = new int[y][x];
     }
-    
+
     public int[][] getBoardMatrix() {
         return boardMatrix;
     }
-    
+
     public void addToBoardMatrix(Shape shape) {
         for (Block block : shape.getList()) {
             width = block.getX();
             height = block.getY();
-            boardMatrix[curY + height][curX + width] = 1; 
+            boardMatrix[curY + height][curX + width] = 1;
         }
     }
 
@@ -37,8 +37,7 @@ public class Board {
     public int getCurX() {
         return curX;
     }
-    
-    
+
     public int[][] initializeBoardMatrix() {
         int[][] matrix = new int[curY][curX];
         for (int y = 0; y < curY; y++) {
@@ -48,11 +47,10 @@ public class Board {
         }
         return matrix;
     }
-    
+
     public boolean emptySlot() {
-        
+
         return true;
     }
-    
-    
+
 }

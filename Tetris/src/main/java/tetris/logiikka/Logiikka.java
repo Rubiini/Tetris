@@ -53,9 +53,15 @@ public class Logiikka {
 
     public boolean tormays(int y, int x) {
         paivitaSijainti();
-        if (tormaysLattiaan(x, y)) return true;
-        if (tormaysOikeaanSeinaan(x, y)) return true;
-        if (tormaysVasempaanSeinaan(x, y)) return true;
+        if (tormaysLattiaan(x, y)) {
+            return true;
+        }
+        if (tormaysOikeaanSeinaan(x, y)) {
+            return true;
+        }
+        if (tormaysVasempaanSeinaan(x, y)) {
+            return true;
+        }
         return false;
     }
 
@@ -78,7 +84,7 @@ public class Logiikka {
         }
         return false;
     }
-    
+
     public boolean tormaysVasempaanSeinaan(int x, int y) {
         if (x + n == 0) {
             pelialusta.liikuOikealle();
@@ -88,7 +94,7 @@ public class Logiikka {
         }
         return false;
     }
-    
+
     public boolean tormaysOikeaanSeinaan(int x, int y) {
         if (x + n == 11) {
             pelialusta.liikuVasemmalle();
@@ -98,10 +104,10 @@ public class Logiikka {
         }
         return false;
     }
-    
+
     public void paivitaSijainti() {
         n = pelialusta.getX();
         m = pelialusta.getY();
     }
-    
+
 }

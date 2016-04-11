@@ -13,9 +13,8 @@ import tetris.blocks.ShapeCreator;
  * @author Rubiini
  */
 public class Logic {
-    
+
     private ShapeCreator shape;
     private Block block;
-            
-    
+
 }

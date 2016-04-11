@@ -17,10 +17,9 @@ import static org.junit.Assert.*;
  * @author Rubiini
  */
 public class TetrisTest {
-    
+
     @Before
     public void setUp() {
     }
-    
-    
+
 }

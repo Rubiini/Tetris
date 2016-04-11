@@ -10,15 +10,15 @@ import tetris.gui.Update;
  * @author Rubiini
  */
 public class Tetris extends Timer implements ActionListener {
-    
-   private int width; 
-   private int height;
-   private ShapeCreator creator;
-   private Shape shape;
-   private Board board;
-   private boolean running;
-   private Update update;
-   
+
+    private int width;
+    private int height;
+    private ShapeCreator creator;
+    private Shape shape;
+    private Board board;
+    private boolean running;
+    private Update update;
+
     /**
      *
      * @param width
@@ -26,14 +26,14 @@ public class Tetris extends Timer implements ActionListener {
      */
     public Tetris(int width, int height) {
         super(1000, null);
-        
+
         this.width = width;
         this.height = height;
         this.creator = new ShapeCreator();
         this.shape = creator.newShape();
         this.board = new Board(height, width);
         board.initializeBoardMatrix();
-        
+
         addActionListener(this);
         setInitialDelay(2000);
     }
@@ -57,17 +57,17 @@ public class Tetris extends Timer implements ActionListener {
     public boolean isRunning() {
         return running;
     }
-    
+
     private boolean collissionWithLeftWall() {
         return false;
     }
-    
+
     private boolean collissionWithRightWall() {
         return false;
     }
-    
+
     private boolean collissionWithABlockOrFloor() {
-        
+
         board.getBoardMatrix();
         return false;
     }
@@ -77,11 +77,11 @@ public class Tetris extends Timer implements ActionListener {
         if (!running) {
             return;
         }
-        
+
     }
 
     public void setUpdate(Update update) {
         this.update = update;
     }
-   
+
 }

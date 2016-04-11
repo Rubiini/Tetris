@@ -46,9 +46,13 @@ public class BoardTest {
         assertTrue(board.initializeBoardMatrix() instanceof int[][]);
     }
     
-    @Test
+    /*@Test
     public void initializeBoardMatrixNegate() {
+        if (board.getCurX() < 1 || board.getCurY() < 1) {
+            assertEquals(creator, this);
+        }
         board.initializeBoardMatrix();
+        assertEquals(, );
     }
     /*@Test
     public void addToBoardMatrixWorksCorrectly() {

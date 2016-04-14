@@ -68,6 +68,7 @@ public class Tetris extends Timer implements ActionListener {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 if (shape.getX() < 0) {
+                    shape.moveRight();
                     return true;
                 }
             }
@@ -79,6 +80,7 @@ public class Tetris extends Timer implements ActionListener {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 if (shape.getX() >= width) {
+                    shape.moveLeft();
                     return true;
                 }
             }
@@ -91,6 +93,7 @@ public class Tetris extends Timer implements ActionListener {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 if (shape.getY() >= height) {
+                    shape.moveUp();
                     return true;
                 }
             }

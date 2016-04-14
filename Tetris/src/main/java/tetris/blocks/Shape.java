@@ -12,7 +12,6 @@ import java.util.List;
  * @author Rubiini
  */
 public class Shape {
-
     private int y;
     private int x;
     private List<Block> list;

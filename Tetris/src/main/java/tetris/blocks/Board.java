@@ -6,9 +6,7 @@ package tetris.blocks;
  */
 public class Board {
 
-    private final int[][] boardMatrix;
-    private int height;
-    private int width;
+    private int[][] boardMatrix;
     private int curY;
     private int curX;
 
@@ -16,26 +14,6 @@ public class Board {
         this.curY = y;
         this.curX = x;
         this.boardMatrix = new int[y][x];
-    }
-
-    public int[][] getBoardMatrix() {
-        return boardMatrix;
-    }
-
-    public void addToBoardMatrix(Shape shape) {
-        for (Block block : shape.getList()) {
-            width = block.getX();
-            height = block.getY();
-            boardMatrix[curY + height][curX + width] = 1;
-        }
-    }
-
-    public int getCurY() {
-        return curY;
-    }
-
-    public int getCurX() {
-        return curX;
     }
 
     public int[][] initializeBoardMatrix() {
@@ -48,9 +26,29 @@ public class Board {
         return matrix;
     }
 
-    public boolean emptySlot() {
+    public int[][] getBoardMatrix() {
+        return boardMatrix;
+    }
+
+    public void addToBoardMatrix(Shape shape) {
+        for (Block block : shape.getList()) {
+            int width = block.getX();
+            int height = block.getY();
+            boardMatrix[curY + height][curX + width] = 1;
+        }
+    }
+
+    public int getCurY() {
+        return curY;
+    }
+
+    public int getCurX() {
+        return curX;
+    }
+
+    /*public boolean emptySlot() {
 
         return true;
-    }
+    }*/
 
 }

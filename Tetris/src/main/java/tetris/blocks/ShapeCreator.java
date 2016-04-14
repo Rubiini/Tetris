@@ -18,10 +18,12 @@ public final class ShapeCreator {
 
     private List<Shape> shape;
     private Random random;
+    private int y;
+    private int x;
 
-    public ShapeCreator() {
+    public ShapeCreator(int y, int x) {
         this.shape = new ArrayList<Shape>();
-        shape = createAllShapes();
+        shape = createAllShapes(y, x);
         random = new Random();
     }
 
@@ -30,15 +32,15 @@ public final class ShapeCreator {
      *
      * @return
      */
-    protected List<Shape> createAllShapes() {
+    protected List<Shape> createAllShapes(int y, int x) {
         List<Shape> shapeList = new ArrayList<Shape>();
-        shapeList.add(blockI());
-        shapeList.add(blockO());
-        shapeList.add(blockS());
-        shapeList.add(blockZ());
-        shapeList.add(blockL());
-        shapeList.add(blockJ());
-        shapeList.add(blockT());
+        shapeList.add(blockI(y, x));
+        shapeList.add(blockO(y, x));
+        shapeList.add(blockS(y, x));
+        shapeList.add(blockZ(y, x));
+        shapeList.add(blockL(y, x));
+        shapeList.add(blockJ(y, x));
+        shapeList.add(blockT(y, x));
         return shapeList;
     }
 
@@ -47,13 +49,13 @@ public final class ShapeCreator {
      *
      * @return
      */
-    protected Shape blockI() {
+    protected Shape blockI(int y, int x) {
         List<Block> list = createNewList();
-        list.add(new Block(0, 0));
-        list.add(new Block(0, 1));
-        list.add(new Block(0, 2));
-        list.add(new Block(0, 3));
-        return new Shape(list);
+        list.add(new Block(y, x));
+        list.add(new Block(y, x + 1));
+        list.add(new Block(y, x + 2));
+        list.add(new Block(y, x + 3));
+        return new Shape(y, x, list);
     }
 
     /**
@@ -61,13 +63,13 @@ public final class ShapeCreator {
      *
      * @return
      */
-    protected Shape blockO() {
+    protected Shape blockO(int y, int x) {
         List<Block> list = createNewList();
-        list.add(new Block(0, 0));
-        list.add(new Block(0, 1));
-        list.add(new Block(1, 0));
-        list.add(new Block(1, 1));
-        return new Shape(list);
+        list.add(new Block(y, x));
+        list.add(new Block(y, x + 1));
+        list.add(new Block(y + 1, x));
+        list.add(new Block(y + 1, x + 1));
+        return new Shape(y, x, list);
     }
 
     /**
@@ -75,13 +77,13 @@ public final class ShapeCreator {
      *
      * @return
      */
-    protected Shape blockS() {
+    protected Shape blockS(int y, int x) {
         List<Block> list = createNewList();
-        list.add(new Block(0, 2));
-        list.add(new Block(0, 1));
-        list.add(new Block(1, 0));
-        list.add(new Block(1, 1));
-        return new Shape(list);
+        list.add(new Block(y, x + 2));
+        list.add(new Block(y, x + 1));
+        list.add(new Block(y + 1, x));
+        list.add(new Block(y + 1, x + 1));
+        return new Shape(y, x, list);
     }
 
     /**
@@ -89,13 +91,13 @@ public final class ShapeCreator {
      *
      * @return
      */
-    protected Shape blockZ() {
+    protected Shape blockZ(int y, int x) {
         List<Block> list = createNewList();
-        list.add(new Block(0, 0));
-        list.add(new Block(0, 1));
-        list.add(new Block(1, 1));
-        list.add(new Block(1, 2));
-        return new Shape(list);
+        list.add(new Block(y, x));
+        list.add(new Block(y, x + 1));
+        list.add(new Block(y + 1, x + 1));
+        list.add(new Block(y + 1, x + 2));
+        return new Shape(y, x, list);
     }
 
     /**
@@ -103,13 +105,13 @@ public final class ShapeCreator {
      *
      * @return
      */
-    protected Shape blockL() {
+    protected Shape blockL(int y, int x) {
         List<Block> list = createNewList();
-        list.add(new Block(0, 0));
-        list.add(new Block(0, 1));
-        list.add(new Block(0, 2));
-        list.add(new Block(1, 0));
-        return new Shape(list);
+        list.add(new Block(y, x));
+        list.add(new Block(y, x + 1));
+        list.add(new Block(y, x + 2));
+        list.add(new Block(y + 1, x));
+        return new Shape(y, x, list);
     }
 
     /**
@@ -117,13 +119,13 @@ public final class ShapeCreator {
      *
      * @return
      */
-    protected Shape blockJ() {
+    protected Shape blockJ(int y, int x) {
         List<Block> list = createNewList();
-        list.add(new Block(0, 0));
-        list.add(new Block(0, 1));
-        list.add(new Block(0, 2));
-        list.add(new Block(1, 2));
-        return new Shape(list);
+        list.add(new Block(y, x));
+        list.add(new Block(y, x + 1));
+        list.add(new Block(y, x + 2));
+        list.add(new Block(y + 1, x + 2));
+        return new Shape(y, x, list);
     }
 
     /**
@@ -131,13 +133,13 @@ public final class ShapeCreator {
      *
      * @return
      */
-    protected Shape blockT() {
+    protected Shape blockT(int y, int x) {
         List<Block> list = createNewList();
-        list.add(new Block(0, 0));
-        list.add(new Block(0, 1));
-        list.add(new Block(0, 2));
-        list.add(new Block(1, 1));
-        return new Shape(list);
+        list.add(new Block(y, x));
+        list.add(new Block(y, x + 1));
+        list.add(new Block(y, x + 2));
+        list.add(new Block(y + 1, x + 1));
+        return new Shape(y, x, list);
     }
 
     /**

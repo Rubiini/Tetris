@@ -26,7 +26,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Tetris tetris = new Tetris(10,20);
+        Tetris tetris = new Tetris(20, 10);
 
         Ui ui = new Ui(tetris, 10, 10);
         SwingUtilities.invokeLater(ui);

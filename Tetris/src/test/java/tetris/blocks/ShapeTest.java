@@ -24,7 +24,7 @@ public class ShapeTest {
     
     @Before
     public void setUp() {
-        creator = new ShapeCreator();
+        creator = new ShapeCreator(0, 5);
         shape = creator.newShape();
     }
     

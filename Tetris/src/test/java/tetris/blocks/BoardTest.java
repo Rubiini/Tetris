@@ -24,7 +24,7 @@ public class BoardTest {
     
     @Before
     public void setUp() {
-        creator = new ShapeCreator();
+        creator = new ShapeCreator(20, 5);
         shape = creator.newShape();
         board = new Board(20, 10);
     }

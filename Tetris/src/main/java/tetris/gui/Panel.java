@@ -19,7 +19,7 @@ public class Panel extends JPanel implements Update{
     private int widthSize;
     private int heightSize;
 
-    public Panel(Tetris tetris, int widthSize, int heightSize) {
+    public Panel(Tetris tetris, int heightSize, int widthSize) {
         this.tetris = tetris;
         this.widthSize = widthSize;
         this.heightSize = heightSize;

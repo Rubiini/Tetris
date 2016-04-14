@@ -13,12 +13,33 @@ import java.util.List;
  */
 public class Shape {
 
+    private int y;
+    private int x;
     private List<Block> list;
 
-    public Shape(List<Block> list) {
+    public Shape(int y, int x, List<Block> list) {
+        this.y = y;
+        this.x = x;
         this.list = list;
+    } 
+
+    public int getY() {
+        return y;
     }
 
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    
     public List<Block> getList() {
         return list;
     }
@@ -30,6 +51,7 @@ public class Shape {
     public void moveDown() {
         for (Block block : list) {
             block.moveDown();
+            System.out.println(getY());
         }
     }
 

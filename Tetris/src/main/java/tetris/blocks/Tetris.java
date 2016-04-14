@@ -24,12 +24,12 @@ public class Tetris extends Timer implements ActionListener {
      * @param width
      * @param height
      */
-    public Tetris(int width, int height) {
+    public Tetris(int height, int width) {
         super(1000, null);
 
         this.width = width;
         this.height = height;
-        this.creator = new ShapeCreator();
+        this.creator = new ShapeCreator(0, width / 2);
         this.shape = creator.newShape();
         this.board = new Board(height, width);
         board.initializeBoardMatrix();
@@ -58,16 +58,37 @@ public class Tetris extends Timer implements ActionListener {
         return running;
     }
 
-    private boolean collissionWithLeftWall() {
+    public boolean collissionWithLeftWall() {
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if (shape.getX() < 0) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
-    private boolean collissionWithRightWall() {
+    public boolean collissionWithRightWall() {
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if (shape.getX() >= width) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
-    private boolean collissionWithABlockOrFloor() {
-
+    public boolean collissionWithABlockOrFloor() {
+        int[][] matrix = board.getBoardMatrix();
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if (shape.getY() >= height) {
+                    return true;
+                }
+            }
+        }
         board.getBoardMatrix();
         return false;
     }
@@ -77,6 +98,11 @@ public class Tetris extends Timer implements ActionListener {
         if (!running) {
             return;
         }
+        shape.moveDown();
+        shape.moveLeft();
+        shape.moveRight();
+        shape.moveUp();
+        
 
     }
 
@@ -84,4 +110,8 @@ public class Tetris extends Timer implements ActionListener {
         this.update = update;
     }
 
+    public void updateTetris() {
+        update.update();
+        setDelay(1000);
+    }
 }

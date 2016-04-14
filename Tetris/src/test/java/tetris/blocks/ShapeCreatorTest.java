@@ -19,7 +19,7 @@ public class ShapeCreatorTest {
     
     @Before
     public void setUp() {
-        creator = new ShapeCreator();
+        creator = new ShapeCreator(10, 5);
     }
     
     @Test
@@ -35,36 +35,36 @@ public class ShapeCreatorTest {
     
     @Test
     public void blockIWorksCorrectly() {
-        assertTrue(creator.blockI() instanceof Shape);
+        assertTrue(creator.blockI(20, 5) instanceof Shape);
     }
     
     @Test
     public void blockOWorksCorrectly() {
-        assertTrue(creator.blockO() instanceof Shape);
+        assertTrue(creator.blockO(20, 5) instanceof Shape);
     }
     
     @Test
     public void blockSWorksCorrectly() {
-        assertTrue(creator.blockS() instanceof Shape);
+        assertTrue(creator.blockS(20, 5) instanceof Shape);
     }
     
     @Test
     public void blockZWorksCorrectly() {
-        assertTrue(creator.blockZ() instanceof Shape);
+        assertTrue(creator.blockZ(20, 5) instanceof Shape);
     }
     
     @Test
     public void blockLWorksCorrectly() {
-        assertTrue(creator.blockL() instanceof Shape);
+        assertTrue(creator.blockL(20, 5) instanceof Shape);
     }
     
     @Test
     public void blockJWorksCorrectly() {
-        assertTrue(creator.blockJ() instanceof Shape);
+        assertTrue(creator.blockJ(20, 5) instanceof Shape);
     }
     
     @Test
     public void blockTWorksCorrectly() {
-        assertTrue(creator.blockT() instanceof Shape);
+        assertTrue(creator.blockT(20, 5) instanceof Shape);
     }
 }

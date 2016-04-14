@@ -1,8 +1,14 @@
-package tetris.blocks;
+package tetris.logic;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.Timer;
+import tetris.blocks.Block;
+import tetris.blocks.Board;
+import tetris.blocks.Shape;
+import tetris.blocks.ShapeCreator;
 import tetris.gui.Update;
 
 /**
@@ -26,16 +32,16 @@ public class Tetris extends Timer implements ActionListener {
      */
     public Tetris(int height, int width) {
         super(1000, null);
-
         this.width = width;
         this.height = height;
-        this.creator = new ShapeCreator(0, width / 2);
+        this.creator = new ShapeCreator(0, width / 2 - 1);
         this.shape = creator.newShape();
         this.board = new Board(height, width);
         board.initializeBoardMatrix();
+        running = true;
 
         addActionListener(this);
-        setInitialDelay(2000);
+        setInitialDelay(100);
     }
 
     public int getWidth() {
@@ -102,8 +108,7 @@ public class Tetris extends Timer implements ActionListener {
         shape.moveLeft();
         shape.moveRight();
         shape.moveUp();
-        
-
+        updateTetris();
     }
 
     public void setUpdate(Update update) {
@@ -112,6 +117,5 @@ public class Tetris extends Timer implements ActionListener {
 
     public void updateTetris() {
         update.update();
-        setDelay(1000);
     }
 }

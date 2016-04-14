@@ -51,7 +51,6 @@ public class Shape {
     public void moveDown() {
         for (Block block : list) {
             block.moveDown();
-            System.out.println(getY());
         }
     }
 

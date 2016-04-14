@@ -16,37 +16,42 @@ import java.util.Random;
  */
 public final class ShapeCreator {
 
-    private List<Shape> shape;
+    private List<Shape> shapeList;
     private Random random;
     private int y;
     private int x;
 
     public ShapeCreator(int y, int x) {
-        this.shape = new ArrayList<Shape>();
-        shape = createAllShapes(y, x);
+        this.shapeList = new ArrayList<>();
+        shapeList = createAllShapes(y, x);
         random = new Random();
     }
 
     /**
      * Alustaa kaikki palat ja tekee niistä listan;
      *
+     * @param y
+     * @param x
      * @return
      */
     protected List<Shape> createAllShapes(int y, int x) {
-        List<Shape> shapeList = new ArrayList<Shape>();
-        shapeList.add(blockI(y, x));
-        shapeList.add(blockO(y, x));
-        shapeList.add(blockS(y, x));
-        shapeList.add(blockZ(y, x));
-        shapeList.add(blockL(y, x));
-        shapeList.add(blockJ(y, x));
-        shapeList.add(blockT(y, x));
-        return shapeList;
+        List<Shape> listOfShapes = new ArrayList<>();
+        listOfShapes.add(blockI(y, x));
+        listOfShapes.add(blockO(y, x));
+        listOfShapes.add(blockS(y, x));
+        listOfShapes.add(blockZ(y, x));
+        listOfShapes.add(blockL(y, x));
+        listOfShapes.add(blockJ(y, x));
+        listOfShapes.add(blockT(y, x));
+        return listOfShapes;
     }
 
     /**
-     * Luo I palan seuraavasti: 0 1 2 3
+     * Luo I palan seuraavasti: 
      *
+     * 0 1 2 3
+     * @param y
+     * @param x
      * @return
      */
     protected Shape blockI(int y, int x) {
@@ -59,8 +64,11 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo O palan seuraavasti: 0 1 2 3
-     *
+     * Luo O palan seuraavasti: 
+     * 0 1 
+     * 2 3
+     * @param y
+     * @param x
      * @return
      */
     protected Shape blockO(int y, int x) {
@@ -73,8 +81,11 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo S palan seuraavasti: 1 0 2 3
-     *
+     * Luo S palan seuraavasti: 
+     *   1 0 
+     * 2 3
+     * @param y
+     * @param x
      * @return
      */
     protected Shape blockS(int y, int x) {
@@ -87,8 +98,11 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo Z palan seuraavasti: 0 1 2 3
-     *
+     * Luo Z palan seuraavasti: 
+     * 0 1 
+     *   2 3
+     * @param y
+     * @param x
      * @return
      */
     protected Shape blockZ(int y, int x) {
@@ -101,8 +115,11 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo L palan seuraavasti: 0 1 2 3
-     *
+     * Luo L palan seuraavasti: 
+     * 0 1 2
+     * 3
+     * @param y
+     * @param x
      * @return
      */
     protected Shape blockL(int y, int x) {
@@ -115,8 +132,11 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo J palan seuraavasti: 0 1 2 3
-     *
+     * Luo J palan seuraavasti: 
+     * 0 1 2 
+     *     3
+     * @param y
+     * @param x
      * @return
      */
     protected Shape blockJ(int y, int x) {
@@ -129,8 +149,11 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo T palan seuraavasti: 0 1 2 3
-     *
+     * Luo T palan seuraavasti: 
+     * 0 1 2 
+     *   3
+     * @param y
+     * @param x
      * @return
      */
     protected Shape blockT(int y, int x) {
@@ -159,6 +182,6 @@ public final class ShapeCreator {
      */
     public Shape newShape() {
         int number = random.nextInt(6);
-        return shape.get(number);
+        return shapeList.get(number);
     }
 }

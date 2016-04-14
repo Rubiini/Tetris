@@ -7,13 +7,8 @@ import javax.swing.SwingUtilities;
 import tetris.blocks.Block;
 import tetris.blocks.Shape;
 import tetris.blocks.ShapeCreator;
-import tetris.blocks.Tetris;
+import tetris.logic.Tetris;
 import tetris.gui.Ui;
-import tetris.logiikka.Logiikka;
-import tetris.logiikka.PalikanArpoja;
-import tetris.palat.IPala;
-import tetris.palat.Pelialusta;
-import tetris.palat.Palikka;
 import tetris.gui.Update;
 
 /**
@@ -52,65 +47,9 @@ public class Main {
             System.out.print(lista.getY());
             System.out.println("");
         }
-        /*Scanner lukija = new Scanner(System.in);
+        */
 
-        Pelialusta alusta = new Pelialusta(18, 1);
-        Logiikka logic = new Logiikka(alusta);
-        if (logic.lisataankoPalaPelialustaan()) {
-            for (int y = 0; y < 21; y++) {
-                for (int x = 0; x < 12; x++) {
-                    if (alusta.getKoordinaatti(y, x) == 0) {
-                        System.out.print("0 ");
-                    }
-                    if (alusta.getKoordinaatti(y, x) == 1) {
-                        System.out.print("1 ");
-                    }
-                    if (alusta.getKoordinaatti(y, x) > 1 && alusta.getKoordinaatti(y, x) != 9) {
-                        System.out.print("x ");
-                    }
-                    if (alusta.getKoordinaatti(y, x) == 9) {
-                        System.out.print("9 ");
-                    }
-                }
-                System.out.println("");
-            }
-        } else {
-            logic.lisaaPalaPelialustaan();
-            for (int y = 0; y < 21; y++) {
-                for (int x = 0; x < 12; x++) {
-                    if (alusta.getKoordinaatti(y, x) == 0) {
-                        System.out.print("0 ");
-                    }
-                    if (alusta.getKoordinaatti(y, x) == 1) {
-                        System.out.print("1 ");
-                    }
-                    if (alusta.getKoordinaatti(y, x) > 1 && alusta.getKoordinaatti(y, x) != 9) {
-                        System.out.print("x ");
-                    }
-                    if (alusta.getKoordinaatti(y, x) == 9) {
-                        System.out.print("9 ");
-                    }
-                }
-                System.out.println("");
-            }
-        }
-
-        /*while (true) {
-         System.out.println("liikuta A, S, D ja W näppäimillä");
-         String luku = lukija.nextLine();
-         if (luku == "a") {
-         alusta.liikuVasemmalle();
-         } else if (luku == "d") {
-         alusta.liikuOikealle();
-         } else if (luku == "s") {
-         alusta.liikuAlas();
-         } else {
-         alusta.liikuYlos();
-         }
-         logic.lisataankoPalaPelialustaan();
-
-         }
-         */
+        
     }
 
 }

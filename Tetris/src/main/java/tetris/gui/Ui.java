@@ -5,7 +5,7 @@ import java.awt.Dimension;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
-import tetris.blocks.Tetris;
+import tetris.logic.Tetris;
 
 /**
  *
@@ -29,8 +29,8 @@ public class Ui implements Runnable {
     @Override
     public void run() {
          frame = new JFrame("Tetris");
-         int x = (tetris.getWidth() + 1) * this.width + 200;
-         int y = (tetris.getHeight() + 1) * this.height + 400;
+         int x = (tetris.getWidth() + 1) * this.width + 10;
+         int y = (tetris.getHeight() + 1) * this.height + 10;
          
          frame.setPreferredSize(new Dimension(x, y));
          

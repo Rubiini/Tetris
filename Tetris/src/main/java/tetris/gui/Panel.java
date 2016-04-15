@@ -10,7 +10,7 @@ import tetris.blocks.Shape;
 import tetris.logic.Tetris;
 
 /**
- *
+ * Paneeli.
  * @author Rubiini
  */
 public class Panel extends JPanel implements Update {
@@ -19,6 +19,12 @@ public class Panel extends JPanel implements Update {
     private int widthSize;
     private int heightSize;
 
+    /**
+     *
+     * @param tetris
+     * @param heightSize
+     * @param widthSize
+     */
     public Panel(Tetris tetris, int heightSize, int widthSize) {
         this.tetris = tetris;
         this.widthSize = widthSize;
@@ -47,6 +53,9 @@ public class Panel extends JPanel implements Update {
          }*/
     }
 
+    /**
+     *
+     */
     @Override
     public void update() {
         super.repaint();

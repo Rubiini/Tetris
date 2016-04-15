@@ -6,13 +6,18 @@ import tetris.blocks.Shape;
 import tetris.logic.Tetris;
 
 /**
- *
+ * Kuuntelija.
  * @author Rubiini
  */
 public class Listener implements KeyListener {
     private Shape shape;
     private Tetris tetris;
     
+    /**
+     *
+     * @param shape
+     * @param tetris
+     */
     public Listener(Shape shape, Tetris tetris) {
         this.shape = shape;
         this.tetris = tetris;

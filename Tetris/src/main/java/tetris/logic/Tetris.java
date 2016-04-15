@@ -12,8 +12,8 @@ import tetris.blocks.ShapeCreator;
 import tetris.gui.Update;
 
 /**
- *
- * @author Rubiini
+ * Pelin logiikka.
+ * @author samukaup
  */
 public class Tetris extends Timer implements ActionListener {
 
@@ -27,8 +27,8 @@ public class Tetris extends Timer implements ActionListener {
 
     /**
      *
-     * @param width
      * @param height
+     * @param width
      */
     public Tetris(int height, int width) {
         super(1000, null);
@@ -44,18 +44,34 @@ public class Tetris extends Timer implements ActionListener {
         setInitialDelay(0);
     }
 
+    /**
+     *
+     * @return
+     */
     public int getWidth() {
         return width;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getHeight() {
         return height;
     }
 
+    /**
+     *
+     * @return
+     */
     public Board getBoard() {
         return board;
     }
 
+    /**
+     *
+     * @return
+     */
     public Shape getShape() {
         return shape;
     }
@@ -64,6 +80,10 @@ public class Tetris extends Timer implements ActionListener {
         return running;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean collissionWithLeftWall() {
         for (int i = 0; i < 4; i++) {
             if (shape.getList().get(i).getX() < -1) {
@@ -74,6 +94,10 @@ public class Tetris extends Timer implements ActionListener {
         return false;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean collissionWithRightWall() {
         for (int i = 0; i < 4; i++) {
             if (shape.getList().get(i).getX() > width) {
@@ -84,6 +108,10 @@ public class Tetris extends Timer implements ActionListener {
         return false;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean collissionWithABlockOrFloor() {
         int[][] matrix = board.getBoardMatrix();
         for (int i = 0; i < 4; i++) {
@@ -108,28 +136,47 @@ public class Tetris extends Timer implements ActionListener {
         updateTetris();
     }
 
+    /**
+     *
+     * @param update
+     */
     public void setUpdate(Update update) {
         this.update = update;
     }
 
+    /**
+     *
+     */
     public void updateTetris() {
         update.update();
     }
 
+    /**
+     *
+     */
     public void moveDown() {
         shape.moveDown();
         collissionWithABlockOrFloor();
     }
 
+    /**
+     *
+     */
     public void moveUp() {
         shape.moveUp();
     }
 
+    /**
+     *
+     */
     public void moveLeft() {
         shape.moveLeft();
         collissionWithLeftWall();
     }
 
+    /**
+     *
+     */
     public void moveRight() {
         shape.moveRight();
         collissionWithRightWall();

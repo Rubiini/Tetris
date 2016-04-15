@@ -8,69 +8,113 @@ package tetris.blocks;
 import java.util.List;
 
 /**
- *
- * @author Rubiini
+ * Palikka, joka koostuu paloista.
+ * @author samukaup
  */
 public class Shape {
     private int y;
     private int x;
     private List<Block> list;
 
+    /**
+     *
+     * @param y
+     * @param x
+     * @param list
+     */
     public Shape(int y, int x, List<Block> list) {
         this.y = y;
         this.x = x;
         this.list = list;
     } 
 
+    /**
+     *
+     * @return
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     *
+     * @param y
+     */
     public void setY(int y) {
         this.y = y;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     *
+     * @param x
+     */
     public void setX(int x) {
         this.x = x;
     }
 
-    
+    /**
+     *
+     * @return
+     */
     public List<Block> getList() {
         return list;
     }
 
+    /**
+     *
+     * @param list
+     */
     public void setList(List<Block> list) {
         this.list = list;
     }
 
+    /**
+     *
+     */
     public void moveDown() {
         for (Block block : list) {
             block.moveDown();
         }
     }
 
+    /**
+     *
+     */
     public void moveUp() {
         for (Block block : list) {
             block.moveUp();
         }
     }
 
+    /**
+     *
+     */
     public void moveLeft() {
         for (Block block : list) {
             block.moveLeft();
         }
     }
 
+    /**
+     *
+     */
     public void moveRight() {
         for (Block block : list) {
             block.moveRight();
         }
     }
 
+    /**
+     *
+     */
     public void rotate() {
     }
     /*public String toString() {

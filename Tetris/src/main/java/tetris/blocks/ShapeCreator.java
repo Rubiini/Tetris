@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Luo kaikki palat
+ * Luo kaikki palat.
  *
  * @author Rubiini
  */
@@ -21,6 +21,11 @@ public final class ShapeCreator {
     private int y;
     private int x;
 
+    /**
+     *
+     * @param y
+     * @param x
+     */
     public ShapeCreator(int y, int x) {
         this.shapeList = new ArrayList<>();
         shapeList = createAllShapes(y, x);
@@ -28,7 +33,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Alustaa kaikki palat ja tekee niistä listan;
+     * Alustaa kaikki palat ja tekee niistä listan.
      *
      * @param y
      * @param x
@@ -47,7 +52,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo I palan seuraavasti: 
+     * Luo I palan seuraavasti. 
      *
      * 0 1 2 3
      * @param y
@@ -64,7 +69,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo O palan seuraavasti: 
+     * Luo O palan seuraavasti. 
      * 0 1 
      * 2 3
      * @param y
@@ -81,7 +86,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo S palan seuraavasti: 
+     * Luo S palan seuraavasti. 
      *   1 0 
      * 2 3
      * @param y
@@ -98,7 +103,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo Z palan seuraavasti: 
+     * Luo Z palan seuraavasti.
      * 0 1 
      *   2 3
      * @param y
@@ -115,7 +120,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo L palan seuraavasti: 
+     * Luo L palan seuraavasti.
      * 0 1 2
      * 3
      * @param y
@@ -132,7 +137,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo J palan seuraavasti: 
+     * Luo J palan seuraavasti. 
      * 0 1 2 
      *     3
      * @param y
@@ -149,7 +154,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo T palan seuraavasti: 
+     * Luo T palan seuraavasti.
      * 0 1 2 
      *   3
      * @param y
@@ -166,7 +171,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo uuden listan
+     * Luo uuden listan.
      *
      * @return
      */
@@ -176,7 +181,7 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo uuden palan
+     * Luo uuden palan.
      *
      * @return
      */

@@ -1,8 +1,8 @@
 package tetris.blocks;
 
 /**
- *
- * @author Rubiini
+ * Pelialusta.
+ * @author samukaup
  */
 public class Board {
 
@@ -10,16 +10,29 @@ public class Board {
     private int curY;
     private int curX;
 
+    /**
+     *
+     * @param y
+     * @param x
+     */
     public Board(int y, int x) {
         this.curY = y;
         this.curX = x;
         this.boardMatrix = new int[y][x];
     }
 
+    /**
+     *
+     * @return
+     */
     public int[][] getBoardMatrix() {
         return boardMatrix;
     }
 
+    /**
+     *
+     * @param shape
+     */
     public void addToBoardMatrix(Shape shape) {
         for (Block block : shape.getList()) {
             int width = block.getX();
@@ -28,10 +41,18 @@ public class Board {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public int getCurY() {
         return curY;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getCurX() {
         return curX;
     }

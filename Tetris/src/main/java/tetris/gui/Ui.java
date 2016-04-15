@@ -19,6 +19,12 @@ public class Ui implements Runnable {
     private int width;
     private Panel panel;
 
+    /**
+     *
+     * @param tetris
+     * @param height
+     * @param width
+     */
     public Ui(Tetris tetris, int height, int width) {
         this.tetris = tetris;
         this.height = height;
@@ -41,6 +47,10 @@ public class Ui implements Runnable {
         this.frame.setVisible(true);
     }
 
+    /**
+     *
+     * @param container
+     */
     public void createComponents(Container container) {
         panel = new Panel(tetris, height, width);
         container.add(panel);
@@ -48,10 +58,18 @@ public class Ui implements Runnable {
         frame.addKeyListener(listener);
     }
 
+    /**
+     *
+     * @return
+     */
     public JFrame getFrame() {
         return frame;
     }
 
+    /**
+     *
+     * @return
+     */
     public Update getUpdate() {
         return panel;
     }

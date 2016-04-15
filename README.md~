@@ -6,9 +6,11 @@ Tetris. Peli, jossa on tarkoituksena ker‰t‰ pisteit‰ muodostamalla putoavista pa
 Pelaaja voi liikuttaa palikoita k‰‰nt‰m‰ll‰, sek‰ liikuttamalla vasemmalle tai oikealle nuolin‰pp‰imill‰.
 
 ## Dokumentaatio
-[aiheen kuvaus](Dokumentation/aiheenKuvausJaRakenne.md)
+[Linkki dokumentaatioon](Documentation/)
 
-[tunti kirjanpito](Dokumentation/tuntikirjanpito.md)
+[aiheen kuvaus](Documentation/aiheenKuvausJaRakenne.md)
+
+[tunti kirjanpito](Documentation/tuntikirjanpito.md)
 
 [Pit raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/pit/201604151716/index.html)
 

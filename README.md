@@ -8,9 +8,9 @@ Pelaaja voi liikuttaa palikoita k‰‰nt‰m‰ll‰, sek‰ liikuttamalla vasemmalle tai o
 ## Dokumentaatio
 [Linkki dokumentaatioon](Documentation/)
 
-[aiheen kuvaus](Dokumentation/aiheenKuvausJaRakenne.md)
+[Aiheen kuvaus](Documentation/aiheenKuvausJaRakenne.md)
 
-[tunti kirjanpito](Dokumentation/tuntikirjanpito.md)
+[Tunti kirjanpito](Documentation/tuntikirjanpito.md)
 
 [Pit raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/pit/201604151716/index.html)
 

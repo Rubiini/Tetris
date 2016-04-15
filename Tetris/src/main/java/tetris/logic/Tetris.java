@@ -81,7 +81,7 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     *
+     * Estää palikkaa liikkumasta vasemman seinän läpi.
      * @return
      */
     public boolean collissionWithLeftWall() {
@@ -95,7 +95,7 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     *
+     * Estää palikkaa liikkumasta oikean seinän läpi.
      * @return
      */
     public boolean collissionWithRightWall() {
@@ -109,7 +109,8 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     *
+     * Estää palikkaa liikkumasta lattian läpi.
+     * Tulevaisuudessa estää myös palikkaa liikkumasta muiden palojen läpi.
      * @return
      */
     public boolean collissionWithABlockOrFloor() {
@@ -152,7 +153,7 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     *
+     * Liikuttaa palikkaa alas.
      */
     public void moveDown() {
         shape.moveDown();
@@ -160,14 +161,14 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     *
+     * Liikuttaa palikkaa alas.
      */
     public void moveUp() {
         shape.moveUp();
     }
 
     /**
-     *
+     * Liikuttaa palikkaa alas.
      */
     public void moveLeft() {
         shape.moveLeft();
@@ -175,7 +176,7 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     *
+     * Liikuttaa palikkaa alas.
      */
     public void moveRight() {
         shape.moveRight();

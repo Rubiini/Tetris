@@ -36,28 +36,28 @@ public class Block {
     }
 
     /**
-     *
+     * Liikuttaa palan alas.
      */
     public void moveDown() {
         y++;
     }
 
     /**
-     *
+     * Liikuttaa palan ylös.
      */
     public void moveUp() {
         y--;
     }
 
     /**
-     *
+     * Liikuttaa palan vasemmalle.
      */
     public void moveLeft() {
         x--;
     }
 
     /**
-     *
+     * Liikuttaa palan oikealle.
      */
     public void moveRight() {
         x++;

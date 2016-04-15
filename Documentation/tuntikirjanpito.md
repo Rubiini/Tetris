@@ -13,3 +13,4 @@ Päivä | Tunnit | Kuvaus
 13.04.2016 | 1h | Koodausta
 14.04.2016 | 2h | Koodausta
 15.04.2016 | 6h | Testausta, logiikkaa, raportit, tuntikirjanpito jne...
+15.04.2016 | 2h | Luokkakaavion luonti ja javadoc

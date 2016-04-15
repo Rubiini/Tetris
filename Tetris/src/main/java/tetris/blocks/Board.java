@@ -30,7 +30,7 @@ public class Board {
     }
 
     /**
-     *
+     * Lisää palikan kaikki palat taulukkoon.
      * @param shape
      */
     public void addToBoardMatrix(Shape shape) {

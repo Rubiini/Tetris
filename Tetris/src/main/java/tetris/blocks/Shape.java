@@ -77,7 +77,7 @@ public class Shape {
     }
 
     /**
-     *
+     * Liikuttaa palikan kaikkia paloja alas.
      */
     public void moveDown() {
         for (Block block : list) {
@@ -86,7 +86,7 @@ public class Shape {
     }
 
     /**
-     *
+     * Liikuttaa palikan kaikkia paloja ylös.
      */
     public void moveUp() {
         for (Block block : list) {
@@ -95,7 +95,7 @@ public class Shape {
     }
 
     /**
-     *
+     * Liikuttaa palikan kaikkia paloja vasemmalle.
      */
     public void moveLeft() {
         for (Block block : list) {
@@ -104,7 +104,7 @@ public class Shape {
     }
 
     /**
-     *
+     * Liikuttaa palikan kaikkia paloja oikealle.
      */
     public void moveRight() {
         for (Block block : list) {
@@ -115,24 +115,7 @@ public class Shape {
     /**
      *
      */
-    public void rotate() {
-    }
-    /*public String toString() {
-     Block block = new Block(0, 0);
-     for (int i = 0; i < 4; i++) {
-     block = list.get(i);
-     block.getX();
-     System.out.println(list.get(i));
-     }
-     return null;
-     }
-    
-     public int[][] mapping() {
-     for (Block block : list) {
-            
-     }
-     return null;
-     }
-     */
+    /*public void rotate() {
+    }*/
 
 }

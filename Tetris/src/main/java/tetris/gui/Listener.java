@@ -14,7 +14,7 @@ public class Listener implements KeyListener {
     private Tetris tetris;
     
     /**
-     *
+     * Näppäimistökuuntelija
      * @param shape
      * @param tetris
      */

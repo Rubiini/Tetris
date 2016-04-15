@@ -12,7 +12,7 @@ import tetris.blocks.ShapeCreator;
 import tetris.gui.Update;
 
 /**
- * Pelin logiikka.
+ * Pelin logiikasta vastaava luokka.
  * @author samukaup
  */
 public class Tetris extends Timer implements ActionListener {

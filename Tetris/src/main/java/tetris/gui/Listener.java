@@ -3,6 +3,7 @@ package tetris.gui;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import tetris.blocks.Shape;
+import tetris.logic.Tetris;
 
 /**
  *
@@ -10,9 +11,11 @@ import tetris.blocks.Shape;
  */
 public class Listener implements KeyListener {
     private Shape shape;
-
-    public Listener(Shape shape) {
+    private Tetris tetris;
+    
+    public Listener(Shape shape, Tetris tetris) {
         this.shape = shape;
+        this.tetris = tetris;
     }
 
     @Override
@@ -23,13 +26,13 @@ public class Listener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent ke) {
         if (ke.getKeyCode() == KeyEvent.VK_UP) {
-            shape.moveUp();
+            tetris.moveUp(); 
         } else if (ke.getKeyCode() == KeyEvent.VK_DOWN) {
-            shape.moveDown();
+            tetris.moveDown();
         } else if (ke.getKeyCode() == KeyEvent.VK_LEFT) {
-            shape.moveLeft();
+            tetris.moveLeft();
         } else if (ke.getKeyCode() == KeyEvent.VK_RIGHT) {
-            shape.moveRight();
+            tetris.moveRight();
         }
     }
 

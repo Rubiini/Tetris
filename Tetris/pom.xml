@@ -38,9 +38,11 @@
                 <configuration>
                     <targetClasses>
                         <param>tetris.blocks.*</param>
+                        <param>tetris.logic.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>tetris.blocks.*</param>
+                        <param>tetris.logic.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

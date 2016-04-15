@@ -79,4 +79,10 @@ public class ShapeTest {
     public void rotateWorksCorrectly() {
         
     }
+    
+    @Test
+    public void getListWorks() {
+        assertTrue(shape.getList() instanceof List);
+    }
+            
 }

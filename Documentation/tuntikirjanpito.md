@@ -10,4 +10,6 @@ PÃ¤ivÃ¤ | Tunnit | Kuvaus
 09.04.2016 | 10h | Koodausta ja lisää hajoilua... 
 10.04.2016 | 10h | Koodausta uudesta näkökulmasta, koska aikaisempi ei vain todellakaan luonnistunut. Nyt luonnistuu paremmin dokumentointia.
 11.04.2016 | 3h | Testausta
-
+13.04.2016 | 1h | Koodausta
+14.04.2016 | 2h | Koodausta
+15.04.2016 | 6h | Testausta, logiikkaa, raportit, tuntikirjanpito jne...

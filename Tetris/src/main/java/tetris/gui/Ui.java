@@ -18,43 +18,42 @@ public class Ui implements Runnable {
     private int height;
     private int width;
     private Panel panel;
-    
 
     public Ui(Tetris tetris, int height, int width) {
         this.tetris = tetris;
         this.height = height;
         this.width = width;
     }
-    
+
     @Override
     public void run() {
-         frame = new JFrame("Tetris");
-         int x = (tetris.getWidth() + 1) * this.width + 10;
-         int y = (tetris.getHeight() + 1) * this.height + 10;
-         
-         frame.setPreferredSize(new Dimension(x, y));
-         
-         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-         
-         createComponents(frame.getContentPane());
-         
-         frame.pack();
-         frame.setVisible(true);
+        this.frame = new JFrame("Tetris");
+        int x = (tetris.getWidth() + 1) * this.width + 10;
+        int y = (tetris.getHeight() + 1) * this.height + 10;
+
+        this.frame.setPreferredSize(new Dimension(x, y));
+
+        this.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        createComponents(this.frame.getContentPane());
+
+        this.frame.pack();
+        this.frame.setVisible(true);
     }
-    
+
     public void createComponents(Container container) {
         panel = new Panel(tetris, height, width);
         container.add(panel);
-        KeyListener listener = new Listener(tetris.getShape());
+        KeyListener listener = new Listener(tetris.getShape(), tetris);
         frame.addKeyListener(listener);
     }
-    
+
     public JFrame getFrame() {
         return frame;
     }
-    
+
     public Update getUpdate() {
         return panel;
     }
-    
+
 }

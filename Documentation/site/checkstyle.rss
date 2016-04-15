@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2016</copyright>
     <item>
-      <title>File: 13,
+      <title>File: 10,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#tetris.logiikka.PalikanArpoja.java">tetris/logiikka/PalikanArpoja.java</a>
+                  <a href="${project.url}/checkstyle.html#tetris.gui.Ui.java">tetris/gui/Ui.java</a>
                 </td>
                 <td>
                   0
@@ -60,7 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.TPala.java">tetris/palat/TPala.java</a>
+                  <a href="${project.url}/checkstyle.html#tetris.gui.Panel.java">tetris/gui/Panel.java</a>
                 </td>
                 <td>
                   0
@@ -74,7 +74,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.ZPala.java">tetris/palat/ZPala.java</a>
+                  <a href="${project.url}/checkstyle.html#tetris.logic.Tetris.java">tetris/logic/Tetris.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#tetris.blocks.Shape.java">tetris/blocks/Shape.java</a>
                 </td>
                 <td>
                   0
@@ -102,7 +116,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.SPala.java">tetris/palat/SPala.java</a>
+                  <a href="${project.url}/checkstyle.html#tetris.blocks.Board.java">tetris/blocks/Board.java</a>
                 </td>
                 <td>
                   0
@@ -116,7 +130,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.OPala.java">tetris/palat/OPala.java</a>
+                  <a href="${project.url}/checkstyle.html#tetris.gui.Listener.java">tetris/gui/Listener.java</a>
                 </td>
                 <td>
                   0
@@ -130,7 +144,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.LPala.java">tetris/palat/LPala.java</a>
+                  <a href="${project.url}/checkstyle.html#tetris.blocks.Block.java">tetris/blocks/Block.java</a>
                 </td>
                 <td>
                   0
@@ -144,7 +158,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.Pelialusta.java">tetris/palat/Pelialusta.java</a>
+                  <a href="${project.url}/checkstyle.html#tetris.gui.Update.java">tetris/gui/Update.java</a>
                 </td>
                 <td>
                   0
@@ -158,63 +172,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.JPala.java">tetris/palat/JPala.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.IPala.java">tetris/palat/IPala.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.Ruutu.java">tetris/palat/Ruutu.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#tetris.logiikka.Logiikka.java">tetris/logiikka/Logiikka.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#tetris.palat.Palat.java">tetris/palat/Palat.java</a>
+                  <a href="${project.url}/checkstyle.html#tetris.blocks.ShapeCreator.java">tetris/blocks/ShapeCreator.java</a>
                 </td>
                 <td>
                   0

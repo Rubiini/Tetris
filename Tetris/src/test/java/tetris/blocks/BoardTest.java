@@ -29,7 +29,7 @@ public class BoardTest {
         board = new Board(20, 10);
     }
     
-    @Test
+    /*@Test
     public void initializeBoardMatrixWorksCorrectly() {
         int[][] matrix;
         board.initializeBoardMatrix();

@@ -37,11 +37,11 @@ public class Tetris extends Timer implements ActionListener {
         this.creator = new ShapeCreator(0, width / 2 - 1);
         this.shape = creator.newShape();
         this.board = new Board(height, width);
-        board.initializeBoardMatrix();
+        //board.initializeBoardMatrix();
         running = true;
 
         addActionListener(this);
-        setInitialDelay(100);
+        setInitialDelay(0);
     }
 
     public int getWidth() {
@@ -65,24 +65,20 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     public boolean collissionWithLeftWall() {
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                if (shape.getX() < 0) {
-                    shape.moveRight();
-                    return true;
-                }
+        for (int i = 0; i < 4; i++) {
+            if (shape.getList().get(i).getX() < -1) {
+                this.moveRight();
+                return true;
             }
         }
         return false;
     }
 
     public boolean collissionWithRightWall() {
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                if (shape.getX() >= width) {
-                    shape.moveLeft();
-                    return true;
-                }
+        for (int i = 0; i < 4; i++) {
+            if (shape.getList().get(i).getX() > width) {
+                this.moveLeft();
+                return true;
             }
         }
         return false;
@@ -90,12 +86,10 @@ public class Tetris extends Timer implements ActionListener {
 
     public boolean collissionWithABlockOrFloor() {
         int[][] matrix = board.getBoardMatrix();
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                if (shape.getY() >= height) {
-                    shape.moveUp();
-                    return true;
-                }
+        for (int i = 0; i < 4; i++) {
+            if (shape.getList().get(i).getY() > height - 1) {
+                this.moveUp();
+                return true;
             }
         }
         board.getBoardMatrix();
@@ -107,10 +101,10 @@ public class Tetris extends Timer implements ActionListener {
         if (!running) {
             return;
         }
-        shape.moveDown();
-        shape.moveLeft();
-        shape.moveRight();
-        shape.moveUp();
+        moveDown();
+        moveLeft();
+        moveRight();
+        moveUp();
         updateTetris();
     }
 
@@ -120,5 +114,24 @@ public class Tetris extends Timer implements ActionListener {
 
     public void updateTetris() {
         update.update();
+    }
+
+    public void moveDown() {
+        shape.moveDown();
+        collissionWithABlockOrFloor();
+    }
+
+    public void moveUp() {
+        shape.moveUp();
+    }
+
+    public void moveLeft() {
+        shape.moveLeft();
+        collissionWithLeftWall();
+    }
+
+    public void moveRight() {
+        shape.moveRight();
+        collissionWithRightWall();
     }
 }

@@ -16,16 +16,6 @@ public class Board {
         this.boardMatrix = new int[y][x];
     }
 
-    public int[][] initializeBoardMatrix() {
-        int[][] matrix = new int[curY][curX];
-        for (int y = 0; y < curY; y++) {
-            for (int x = 0; x < curX; x++) {
-                matrix[y][x] = 0;
-            }
-        }
-        return matrix;
-    }
-
     public int[][] getBoardMatrix() {
         return boardMatrix;
     }
@@ -48,7 +38,16 @@ public class Board {
 
     /*public boolean emptySlot() {
 
-        return true;
-    }*/
-
+     return true;
+     }*/
+    
+    /*public int[][] initializeBoardMatrix() {
+     int[][] matrix = new int[curY][curX];
+     for (int y = 0; y < curY; y++) {
+     for (int x = 0; x < curX; x++) {
+     matrix[y][x] = 0;
+     }
+     }
+     return matrix;
+     }*/
 }

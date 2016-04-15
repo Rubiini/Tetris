@@ -5,21 +5,28 @@
  */
 package tetris.gui;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import java.awt.event.KeyEvent;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import tetris.blocks.Shape;
+import tetris.logic.Tetris;
 
 /**
  *
  * @author Rubiini
  */
 public class ListenerTest {
+    private Listener listener;
+    private Tetris tetris;
+    private Shape shape;
     
     @Before
     public void setUp() {
+        this.tetris = new Tetris(20, 10);
+        this.listener = new Listener(null, tetris);
+        this.shape = tetris.getShape();
     }
+    
     
 }

@@ -118,12 +118,17 @@ public class Tetris extends Timer implements ActionListener {
         for (int i = 0; i < 4; i++) {
             if (shape.getList().get(i).getY() > height - 1) {
                 this.moveUp();
+                board.addToBoardMatrix(shape);
                 return true;
             }
+            if (matrix[shape.getList().get(i).getY()][shape.getList().get(i).getX()] == 1) { //Jos ruudussa on jo pala
+                
+            }
         }
-        board.getBoardMatrix();
         return false;
     }
+    
+    
 
     @Override
     public void actionPerformed(ActionEvent ae) {

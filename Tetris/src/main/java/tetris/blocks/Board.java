@@ -2,13 +2,14 @@ package tetris.blocks;
 
 /**
  * Pelialusta.
+ *
  * @author samukaup
  */
 public class Board {
 
     private int[][] boardMatrix;
-    private int curY;
-    private int curX;
+    private int height;
+    private int width;
 
     /**
      *
@@ -16,8 +17,8 @@ public class Board {
      * @param x
      */
     public Board(int y, int x) {
-        this.curY = y;
-        this.curX = x;
+        this.height = y;
+        this.width = x;
         this.boardMatrix = new int[y][x];
     }
 
@@ -31,13 +32,43 @@ public class Board {
 
     /**
      * Lisää palikan kaikki palat taulukkoon.
+     *
      * @param shape
      */
     public void addToBoardMatrix(Shape shape) {
         for (Block block : shape.getList()) {
-            int width = block.getX();
-            int height = block.getY();
-            boardMatrix[curY + height][curX + width] = 1;
+            int curX = block.getX();
+            int curY = block.getY();
+            boardMatrix[this.height + curY][this.width + curX] = 1;
+        }
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public boolean deleteFullRows() {
+        for (int y = 0; y < height; y++) {
+            int howMany = 1;
+            for (int x = 0; x < width; x++) {
+                if (boardMatrix[y][x] == 1) {
+                    howMany++;
+                }
+                if (howMany == width) {
+                    deleteRow(y);
+                }
+                boardMatrix[y][x] = 0;
+            }
+        }
+        return false;
+    }
+    /**
+     * 
+     * @param y 
+     */
+    public void deleteRow(int y) {
+        for (int x = 0; x < width; x++) {
+            boardMatrix[y][x] = 0;
         }
     }
 
@@ -46,7 +77,7 @@ public class Board {
      * @return
      */
     public int getCurY() {
-        return curY;
+        return height;
     }
 
     /**
@@ -54,14 +85,13 @@ public class Board {
      * @return
      */
     public int getCurX() {
-        return curX;
+        return width;
     }
 
     /*public boolean emptySlot() {
 
      return true;
      }*/
-    
     /*public int[][] initializeBoardMatrix() {
      int[][] matrix = new int[curY][curX];
      for (int y = 0; y < curY; y++) {

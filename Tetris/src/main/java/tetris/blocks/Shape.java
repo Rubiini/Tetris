@@ -5,28 +5,39 @@
  */
 package tetris.blocks;
 
+import java.util.ArrayList;
 import java.util.List;
+import static tetris.blocks.Direction.*;
 
 /**
  * Palikka, joka koostuu paloista.
+ *
  * @author samukaup
  */
 public class Shape {
+
     private int y;
     private int x;
+    private int num;
     private List<Block> list;
+    private Direction direction;
 
     /**
      *
      * @param y
      * @param x
+     * @param num
      * @param list
      */
-    public Shape(int y, int x, List<Block> list) {
+    public Shape(int y, int x, int num, List<Block> list) {
         this.y = y;
         this.x = x;
+        this.num = num;
         this.list = list;
-    } 
+        this.direction = RIGHT;
+    }
+    
+    
 
     /**
      *
@@ -81,6 +92,7 @@ public class Shape {
      */
     public void moveDown() {
         for (Block block : list) {
+            y++;
             block.moveDown();
         }
     }
@@ -90,6 +102,7 @@ public class Shape {
      */
     public void moveUp() {
         for (Block block : list) {
+            y--;
             block.moveUp();
         }
     }
@@ -99,6 +112,7 @@ public class Shape {
      */
     public void moveLeft() {
         for (Block block : list) {
+            x--;
             block.moveLeft();
         }
     }
@@ -108,14 +122,36 @@ public class Shape {
      */
     public void moveRight() {
         for (Block block : list) {
+            x++;
             block.moveRight();
         }
     }
 
-    /**
-     *
-     */
-    /*public void rotate() {
-    }*/
+    public Shape rotate() {
+        List<Block> blocks = new ArrayList<>();
+        for (Block block : list) {
+            int oldX = block.getX();
+            int oldY = block.getY();
+            
+            if (direction == RIGHT) {
 
+            }
+        }
+        return this;
+    }
+
+    public void shapeCheck() {
+        if (num == 0) {
+            rotateLine();
+        } else if (num == 1) {
+            return;
+        } else {
+            rotate();
+        }
+    }
+
+    public boolean rotateLine() {
+
+        return true;
+    }
 }

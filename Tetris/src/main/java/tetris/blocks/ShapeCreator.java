@@ -168,7 +168,7 @@ public final class ShapeCreator {
      * @return
      */
     public Shape newShape() {
-        int number = random.nextInt(6);
+        int number = random.nextInt(7);
         if (number == 0) return blockI(y, x);
         if (number == 1) return blockO(y, x);
         if (number == 2) return blockS(y, x);

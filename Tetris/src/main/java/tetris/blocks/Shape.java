@@ -36,8 +36,6 @@ public class Shape {
         this.list = list;
         this.direction = RIGHT;
     }
-    
-    
 
     /**
      *
@@ -127,31 +125,238 @@ public class Shape {
         }
     }
 
-    public Shape rotate() {
-        List<Block> blocks = new ArrayList<>();
-        for (Block block : list) {
-            int oldX = block.getX();
-            int oldY = block.getY();
-            
-            if (direction == RIGHT) {
-
-            }
-        }
-        return this;
-    }
-
     public void shapeCheck() {
         if (num == 0) {
-            rotateLine();
+            rotateI();
         } else if (num == 1) {
             return;
+        } else if (num == 2) {
+            rotateS();
+        } else if (num == 3) {
+            rotateZ();
+        } else if (num == 4) {
+            rotateL();
+        } else if (num == 5) {
+            rotateJ();
         } else {
-            rotate();
+            rotateT();
         }
     }
 
-    public boolean rotateLine() {
+    public boolean rotateI() {
+        if (direction == RIGHT || direction == LEFT) {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 2);
+            this.getList().get(3).setX(x + 1);
+            this.getList().get(3).setY(y + 3);
+            direction = UP;
+        } else {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 1);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 3);
+            this.getList().get(3).setY(y + 1);
+            direction = RIGHT;
+        }
 
         return true;
     }
+
+    public boolean rotateS() {
+        if (direction == RIGHT || direction == LEFT) {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 2);
+            direction = UP;
+        } else {
+            this.getList().get(0).setX(x + 2);
+            this.getList().get(0).setY(y);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y);
+            this.getList().get(2).setX(x);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 1);
+            this.getList().get(3).setY(y + 1);
+            direction = RIGHT;
+        }
+
+        return true;
+    }
+
+    public boolean rotateZ() {
+        if (direction == RIGHT || direction == LEFT) {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 0);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 0);
+            this.getList().get(3).setY(y + 2);
+            direction = UP;
+        } else {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 0);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 1);
+            direction = RIGHT;
+        }
+
+        return true;
+    }
+
+    public boolean rotateL() {
+        if (direction == RIGHT) {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 1);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 0);
+            this.getList().get(3).setY(y + 2);
+            direction = UP;
+        } else if (direction == UP) {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 2);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 0);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 2);
+            direction = LEFT;
+        } else if (direction == LEFT) {
+            this.getList().get(0).setX(x + 2);
+            this.getList().get(0).setY(y + 1);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 0);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 0);
+            direction = DOWN;
+        } else {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 2);
+            this.getList().get(3).setX(x + 0);
+            this.getList().get(3).setY(y + 0);
+            direction = RIGHT;
+        }
+
+        return true;
+    }
+
+    public boolean rotateJ() {
+        if (direction == RIGHT) {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 0);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 0);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 1);
+            direction = UP;
+        } else if (direction == UP) {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 2);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 0);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 0);
+            direction = LEFT;
+        } else if (direction == LEFT) {
+            this.getList().get(0).setX(x + 2);
+            this.getList().get(0).setY(y + 1);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 0);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 0);
+            this.getList().get(3).setY(y + 0);
+            direction = DOWN;
+        } else {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 2);
+            this.getList().get(3).setX(x + 0);
+            this.getList().get(3).setY(y + 2);
+            direction = RIGHT;
+        }
+
+        return true;
+    }
+
+    public boolean rotateT() {
+        if (direction == RIGHT) {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 1);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 1);
+            this.getList().get(3).setY(y + 2);
+            direction = UP;
+        } else if (direction == UP) {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 2);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 0);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 1);
+            direction = LEFT;
+        } else if (direction == LEFT) {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 1);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 1);
+            this.getList().get(3).setY(y + 0);
+            direction = DOWN;
+        } else {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 2);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 0);
+            this.getList().get(3).setX(x + 0);
+            this.getList().get(3).setY(y + 1);
+            direction = RIGHT;
+        }
+
+        return true;
+    }
+
 }

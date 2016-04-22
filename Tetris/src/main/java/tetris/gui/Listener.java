@@ -31,7 +31,7 @@ public class Listener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent ke) {
         if (ke.getKeyCode() == KeyEvent.VK_UP) {
-            tetris.moveUp(); 
+            shape.shapeCheck(); 
         } else if (ke.getKeyCode() == KeyEvent.VK_DOWN) {
             tetris.moveDown();
         } else if (ke.getKeyCode() == KeyEvent.VK_LEFT) {

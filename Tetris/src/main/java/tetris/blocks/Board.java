@@ -44,7 +44,7 @@ public class Board {
     }
     
     /**
-     * 
+     * Poistaa täyden rivin. 
      * @return 
      */
     public boolean deleteFullRows() {
@@ -57,7 +57,6 @@ public class Board {
                 if (howMany == width) {
                     deleteRow(y);
                 }
-                boardMatrix[y][x] = 0;
             }
         }
         return false;
@@ -87,18 +86,4 @@ public class Board {
     public int getCurX() {
         return width;
     }
-
-    /*public boolean emptySlot() {
-
-     return true;
-     }*/
-    /*public int[][] initializeBoardMatrix() {
-     int[][] matrix = new int[curY][curX];
-     for (int y = 0; y < curY; y++) {
-     for (int x = 0; x < curX; x++) {
-     matrix[y][x] = 0;
-     }
-     }
-     return matrix;
-     }*/
 }

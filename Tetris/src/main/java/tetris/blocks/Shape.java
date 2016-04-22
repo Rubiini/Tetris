@@ -41,6 +41,15 @@ public class Shape {
      *
      * @return
      */
+    public int getNum() {
+        return num;
+    }
+
+    
+    /**
+     *
+     * @return
+     */
     public int getY() {
         return y;
     }
@@ -125,6 +134,9 @@ public class Shape {
         }
     }
 
+    /**
+     * Tarkastaa palikan mallin ja kutsuu oikeaa rotate metodia.
+     */
     public void shapeCheck() {
         if (num == 0) {
             rotateI();
@@ -143,7 +155,10 @@ public class Shape {
         }
     }
 
-    public boolean rotateI() {
+    /**
+     * Kääntää I palikan.
+     */
+    public void rotateI() {
         if (direction == RIGHT || direction == LEFT) {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y + 0);
@@ -165,11 +180,12 @@ public class Shape {
             this.getList().get(3).setY(y + 1);
             direction = RIGHT;
         }
-
-        return true;
     }
 
-    public boolean rotateS() {
+    /**
+     * Kääntää S palikan.
+     */
+    public void rotateS() {
         if (direction == RIGHT || direction == LEFT) {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y);
@@ -191,22 +207,13 @@ public class Shape {
             this.getList().get(3).setY(y + 1);
             direction = RIGHT;
         }
-
-        return true;
     }
 
-    public boolean rotateZ() {
+    /**
+     * Kääntää Z Palikan.
+     */
+    public void rotateZ() {
         if (direction == RIGHT || direction == LEFT) {
-            this.getList().get(0).setX(x + 1);
-            this.getList().get(0).setY(y + 0);
-            this.getList().get(1).setX(x + 1);
-            this.getList().get(1).setY(y + 1);
-            this.getList().get(2).setX(x + 0);
-            this.getList().get(2).setY(y + 1);
-            this.getList().get(3).setX(x + 0);
-            this.getList().get(3).setY(y + 2);
-            direction = UP;
-        } else {
             this.getList().get(0).setX(x + 0);
             this.getList().get(0).setY(y + 0);
             this.getList().get(1).setX(x + 1);
@@ -215,13 +222,24 @@ public class Shape {
             this.getList().get(2).setY(y + 1);
             this.getList().get(3).setX(x + 2);
             this.getList().get(3).setY(y + 1);
+            direction = UP;
+        } else {
+            this.getList().get(0).setX(x + 1);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 0);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 0);
+            this.getList().get(3).setY(y + 2);
             direction = RIGHT;
         }
-
-        return true;
     }
 
-    public boolean rotateL() {
+    /**
+     * Kääntää L palikkan.
+     */
+    public void rotateL() {
         if (direction == RIGHT) {
             this.getList().get(0).setX(x + 0);
             this.getList().get(0).setY(y + 1);
@@ -263,11 +281,12 @@ public class Shape {
             this.getList().get(3).setY(y + 0);
             direction = RIGHT;
         }
-
-        return true;
     }
 
-    public boolean rotateJ() {
+    /**
+     * Kääntää J palikan.
+     */
+    public void rotateJ() {
         if (direction == RIGHT) {
             this.getList().get(0).setX(x + 0);
             this.getList().get(0).setY(y + 0);
@@ -309,11 +328,12 @@ public class Shape {
             this.getList().get(3).setY(y + 2);
             direction = RIGHT;
         }
-
-        return true;
     }
 
-    public boolean rotateT() {
+    /**
+     * Kääntää T palikan.
+     */
+    public void rotateT() {
         if (direction == RIGHT) {
             this.getList().get(0).setX(x + 0);
             this.getList().get(0).setY(y + 1);
@@ -355,8 +375,5 @@ public class Shape {
             this.getList().get(3).setY(y + 1);
             direction = RIGHT;
         }
-
-        return true;
     }
-
 }

@@ -32,11 +32,11 @@ public final class ShapeCreator {
         random = new Random();
     }
 
-
     /**
-     * Luo I palan seuraavasti. 
+     * Luo I palan seuraavasti.
      *
      * 0 1 2 3
+     *
      * @param y
      * @param x
      * @return
@@ -51,9 +51,8 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo O palan seuraavasti. 
-     * 0 1 
-     * 2 3
+     * Luo O palan seuraavasti. 0 1 2 3
+     *
      * @param y
      * @param x
      * @return
@@ -68,9 +67,8 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo S palan seuraavasti. 
-     *   1 0 
-     * 2 3
+     * Luo S palan seuraavasti. 1 0 2 3
+     *
      * @param y
      * @param x
      * @return
@@ -85,9 +83,8 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo Z palan seuraavasti.
-     * 0 1 
-     *   2 3
+     * Luo Z palan seuraavasti. 0 1 2 3
+     *
      * @param y
      * @param x
      * @return
@@ -102,9 +99,8 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo L palan seuraavasti.
-     * 0 1 2
-     * 3
+     * Luo L palan seuraavasti. 0 1 2 3
+     *
      * @param y
      * @param x
      * @return
@@ -119,9 +115,8 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo J palan seuraavasti. 
-     * 0 1 2 
-     *     3
+     * Luo J palan seuraavasti. 0 1 2 3
+     *
      * @param y
      * @param x
      * @return
@@ -136,9 +131,8 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo T palan seuraavasti.
-     * 0 1 2 
-     *   3
+     * Luo T palan seuraavasti. 0 1 2 3
+     *
      * @param y
      * @param x
      * @return
@@ -169,13 +163,27 @@ public final class ShapeCreator {
      */
     public Shape newShape() {
         int number = random.nextInt(7);
-        if (number == 0) return blockI(y, x);
-        if (number == 1) return blockO(y, x);
-        if (number == 2) return blockS(y, x);
-        if (number == 3) return blockZ(y, x);
-        if (number == 4) return blockL(y, x);
-        if (number == 5) return blockJ(y, x);
-        if (number == 6) return blockT(y, x);
+        if (number == 0) {
+            return blockI(y, x);
+        }
+        if (number == 1) {
+            return blockO(y, x);
+        }
+        if (number == 2) {
+            return blockS(y, x);
+        }
+        if (number == 3) {
+            return blockZ(y, x);
+        }
+        if (number == 4) {
+            return blockL(y, x);
+        }
+        if (number == 5) {
+            return blockJ(y, x);
+        }
+        if (number == 6) {
+            return blockT(y, x);
+        }
         return null;
     }
 }

@@ -3,6 +3,7 @@ package tetris.gui;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.List;
+import java.util.Random;
 import javax.swing.JPanel;
 import tetris.blocks.Block;
 import tetris.blocks.Board;
@@ -38,6 +39,8 @@ public class Panel extends JPanel implements Update {
         Board board = tetris.getBoard();
         int[][] matrix = board.getBoardMatrix();
         List<Block> shape = tetris.getShape().getList();
+        Random random = new Random();
+        
         g.setColor(Color.BLACK);
 
         for (Block block : shape) {

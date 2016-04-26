@@ -32,7 +32,7 @@ public class Tetris extends Timer implements ActionListener {
      * @param width
      */
     public Tetris(int height, int width) {
-        super(0, null);
+        super(500, null);
         this.width = width;
         this.height = height;
         this.creator = new ShapeCreator(1, width / 2 - 1);
@@ -43,6 +43,8 @@ public class Tetris extends Timer implements ActionListener {
         setInitialDelay(0);
     }
 
+    
+    
     /**
      *
      * @return
@@ -86,7 +88,7 @@ public class Tetris extends Timer implements ActionListener {
      */
     public boolean collissionWithLeftWall() {
         for (int i = 0; i < 4; i++) {
-            if (shape.getList().get(i).getX() < 1) {
+            if (shape.getList().get(i).getX() < 0) {
                 return true;
             }
         }
@@ -131,6 +133,7 @@ public class Tetris extends Timer implements ActionListener {
                 return true;
             }
         }
+        updateTetris();
         return false;
     }
 
@@ -140,10 +143,6 @@ public class Tetris extends Timer implements ActionListener {
             return;
         }
         moveDown();
-        moveLeft();
-        moveRight();
-        moveUp();
-
         updateTetris();
     }
 
@@ -172,6 +171,7 @@ public class Tetris extends Timer implements ActionListener {
     public void moveDown() {
         shape.moveDown();
         collissionWithABlockOrFloor();
+        
     }
 
     /**
@@ -179,14 +179,16 @@ public class Tetris extends Timer implements ActionListener {
      */
     public void moveUp() {
         shape.moveUp();
+        updateTetris();
     }
 
     /**
      * Liikuttaa palikkaa alas.
      */
-    public void moveLeft() throws IndexOutOfBoundsException {
+    public void moveLeft() {
         if (!collissionWithLeftWall()) {
             shape.moveLeft();
+            updateTetris();
         }
     }
 
@@ -196,5 +198,6 @@ public class Tetris extends Timer implements ActionListener {
     public void moveRight() {
         shape.moveRight();
         collissionWithRightWall();
+        updateTetris();
     }
 }

@@ -36,20 +36,6 @@ public class Main {
 
         tetris.setUpdate(ui.getUpdate());
         tetris.start();
-        /*ShapeCreator creator = new ShapeCreator();
-        Shape shape = new Shape(null);
-        shape = creator.newShape();
-        /*Shape shape = new Shape();
-        List<Block> list = new ArrayList<Block>();
-        list = shape.newBlock();
-        for (Block lista : list) {
-            System.out.print(lista.getX());
-            System.out.print(lista.getY());
-            System.out.println("");
-        }
-        */
-
-        
     }
 
 }

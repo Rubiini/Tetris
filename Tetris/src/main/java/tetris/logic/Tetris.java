@@ -13,6 +13,7 @@ import tetris.gui.Update;
 
 /**
  * Pelin logiikasta vastaava luokka.
+ *
  * @author samukaup
  */
 public class Tetris extends Timer implements ActionListener {
@@ -31,15 +32,13 @@ public class Tetris extends Timer implements ActionListener {
      * @param width
      */
     public Tetris(int height, int width) {
-        super(1000, null);
+        super(0, null);
         this.width = width;
         this.height = height;
-        this.creator = new ShapeCreator(0, width / 2 - 1);
+        this.creator = new ShapeCreator(1, width / 2 - 1);
         this.shape = creator.newShape();
         this.board = new Board(height, width);
-        //board.initializeBoardMatrix();
         running = true;
-
         addActionListener(this);
         setInitialDelay(0);
     }
@@ -82,12 +81,12 @@ public class Tetris extends Timer implements ActionListener {
 
     /**
      * Estää palikkaa liikkumasta vasemman seinän läpi.
+     *
      * @return
      */
     public boolean collissionWithLeftWall() {
         for (int i = 0; i < 4; i++) {
-            if (shape.getList().get(i).getX() < -1) {
-                this.moveRight();
+            if (shape.getList().get(i).getX() < 1) {
                 return true;
             }
         }
@@ -96,12 +95,13 @@ public class Tetris extends Timer implements ActionListener {
 
     /**
      * Estää palikkaa liikkumasta oikean seinän läpi.
+     *
      * @return
      */
     public boolean collissionWithRightWall() {
         for (int i = 0; i < 4; i++) {
-            if (shape.getList().get(i).getX() > width) {
-                this.moveLeft();
+            if (shape.getList().get(i).getX() > width - 1) {
+                shape.moveLeft();
                 return true;
             }
         }
@@ -109,27 +109,30 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     * Estää palikkaa liikkumasta lattian läpi.
-     * Tulevaisuudessa estää myös palikkaa liikkumasta muiden palojen läpi.
+     * Estää palikkaa liikkumasta lattian läpi. Tulevaisuudessa estää myös
+     * palikkaa liikkumasta muiden palojen läpi.
+     *
      * @return
      */
     public boolean collissionWithABlockOrFloor() {
         int[][] matrix = board.getBoardMatrix();
         for (int i = 0; i < 4; i++) {
-            if (shape.getList().get(i).getY() > height - 1) {
+            if (shape.getList().get(i).getY() > height) {
                 this.moveUp();
-                //board.addToBoardMatrix(shape);
-                return true;
-            }
-            /*if (matrix[shape.getList().get(i).getY()][shape.getList().get(i).getX()] == 1) { //Jos ruudussa on jo pala
                 this.moveUp();
                 board.addToBoardMatrix(shape);
-            }*/
+                shape = creator.newShape();
+                return true;
+            }
+            if (matrix[shape.getList().get(i).getY()][shape.getList().get(i).getX()] == 1) { //Jos ruudussa on jo pala
+                this.moveUp();
+                board.addToBoardMatrix(shape);
+                shape = creator.newShape();
+                return true;
+            }
         }
         return false;
     }
-    
-    
 
     @Override
     public void actionPerformed(ActionEvent ae) {
@@ -140,7 +143,12 @@ public class Tetris extends Timer implements ActionListener {
         moveLeft();
         moveRight();
         moveUp();
+
         updateTetris();
+    }
+
+    public void shapeCheckCall() {
+        shape.shapeCheck();
     }
 
     /**
@@ -176,9 +184,10 @@ public class Tetris extends Timer implements ActionListener {
     /**
      * Liikuttaa palikkaa alas.
      */
-    public void moveLeft() {
-        shape.moveLeft();
-        collissionWithLeftWall();
+    public void moveLeft() throws IndexOutOfBoundsException {
+        if (!collissionWithLeftWall()) {
+            shape.moveLeft();
+        }
     }
 
     /**

@@ -23,7 +23,7 @@ public class Main {
     public static void main(String[] args) {
         Tetris tetris = new Tetris(20, 10);
 
-        Ui ui = new Ui(tetris, 10, 10);
+        Ui ui = new Ui(tetris, 30, 30);
         SwingUtilities.invokeLater(ui);
 
         while (ui.getUpdate() == null) {

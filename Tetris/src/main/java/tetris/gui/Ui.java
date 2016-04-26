@@ -34,7 +34,7 @@ public class Ui implements Runnable {
     @Override
     public void run() {
         this.frame = new JFrame("Tetris");
-        int x = (tetris.getWidth() + 1) * this.width + 10;
+        int x = (tetris.getWidth()) * this.width + 10;
         int y = (tetris.getHeight() + 1) * this.height + 10;
 
         this.frame.setPreferredSize(new Dimension(x, y));

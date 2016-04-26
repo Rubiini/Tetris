@@ -99,9 +99,9 @@ public class Shape {
      */
     public void moveDown() {
         for (Block block : list) {
-            y++;
             block.moveDown();
         }
+        y++;
     }
 
     /**
@@ -109,9 +109,9 @@ public class Shape {
      */
     public void moveUp() {
         for (Block block : list) {
-            y--;
             block.moveUp();
         }
+        y--;
     }
 
     /**
@@ -119,9 +119,9 @@ public class Shape {
      */
     public void moveLeft() {
         for (Block block : list) {
-            x--;
             block.moveLeft();
         }
+        x--;
     }
 
     /**
@@ -129,9 +129,9 @@ public class Shape {
      */
     public void moveRight() {
         for (Block block : list) {
-            x++;
             block.moveRight();
         }
+        x++;
     }
 
     /**

@@ -19,7 +19,7 @@ public class Board {
     public Board(int y, int x) {
         this.height = y;
         this.width = x;
-        this.boardMatrix = new int[y][x];
+        this.boardMatrix = new int[y + 1][x + 1];
     }
 
     /**
@@ -39,17 +39,19 @@ public class Board {
         for (Block block : shape.getList()) {
             int curX = block.getX();
             int curY = block.getY();
-            boardMatrix[this.height + curY][this.width + curX] = 1;
+            boardMatrix[curY][curX] = 1;
         }
+        deleteFullRows();
     }
-    
+
     /**
-     * Poistaa täyden rivin. 
-     * @return 
+     * Poistaa täyden rivin.
+     *
+     * @return
      */
     public boolean deleteFullRows() {
         for (int y = 0; y < height; y++) {
-            int howMany = 1;
+            int howMany = 0;
             for (int x = 0; x < width; x++) {
                 if (boardMatrix[y][x] == 1) {
                     howMany++;
@@ -61,13 +63,26 @@ public class Board {
         }
         return false;
     }
+
     /**
-     * 
-     * @param y 
+     *
+     * @param y
      */
     public void deleteRow(int y) {
         for (int x = 0; x < width; x++) {
             boardMatrix[y][x] = 0;
+        }
+        dropRow(y - 1);
+    }
+
+    public void dropRow(int y) {
+        for (int i = 0; i <= y; y--) {
+            for (int x = 0; x < 10; x++) {
+                if (boardMatrix[y][x] == 1) {
+                    boardMatrix[y][x] = 0;
+                    boardMatrix[y + 1][x] = 1;
+                }
+            }
         }
     }
 

@@ -11,6 +11,7 @@ import tetris.logic.Tetris;
 
 /**
  * Paneeli.
+ *
  * @author Rubiini
  */
 public class Panel extends JPanel implements Update {
@@ -38,19 +39,17 @@ public class Panel extends JPanel implements Update {
         int[][] matrix = board.getBoardMatrix();
         List<Block> shape = tetris.getShape().getList();
         g.setColor(Color.BLACK);
-        
+
         for (Block block : shape) {
             g.fill3DRect(block.getX() * widthSize, block.getY() * heightSize, widthSize, heightSize, true);
         }
-        /*for (int i = 0; i < heightSize; i++) {
-         for (int j = 0; j < widthSize; j++) {
-         if (matrix[i][j] == 0) {
-                    
-         } else {
-                    
-         }
-         }
-         }*/
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (matrix[i][j] == 1) {
+                    g.fill3DRect(j * widthSize, i * heightSize, widthSize, heightSize, true);
+                } 
+            }
+        }
     }
 
     /**

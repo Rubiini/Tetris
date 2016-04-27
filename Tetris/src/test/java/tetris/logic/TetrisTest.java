@@ -32,6 +32,7 @@ public class TetrisTest {
     private Board board;
     private int height;
     private int width;
+    private Update update;
 
     @Before
     public void setUp() {
@@ -40,6 +41,8 @@ public class TetrisTest {
         this.tetris = new Tetris(height, width);
         this.creator = new ShapeCreator(0, 4);
         this.shape = creator.newShape();
+        this.update = new Panel(tetris, height, width);
+        tetris.setUpdate(update);
     }
 
     @Test
@@ -103,7 +106,7 @@ public class TetrisTest {
     @Test
     public void collisionWithABlockOrFloorReturnTrueCorrectly() {
         shape = tetris.getShape();
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < height; i++) {
             shape.moveDown();
         }
         assertEquals(tetris.collissionWithABlockOrFloor(), true);
@@ -210,7 +213,7 @@ public class TetrisTest {
             tetris.moveRight();
             shape = tetris.getShape();
             for (int j = 0; j < 4; j++) {
-                if (i == j) {
+                if (i == j && x < 8) {
                     assertEquals(x + 1, shape.getList().get(j).getX());
                 }
             }

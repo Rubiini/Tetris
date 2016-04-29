@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tetris.blocks;
 
 import java.util.ArrayList;
@@ -10,7 +5,7 @@ import java.util.List;
 import static tetris.blocks.Direction.*;
 
 /**
- * Palikka, joka koostuu paloista.
+ * Palikka(Shape), joka koostuu paloista(Block).
  *
  * @author samukaup
  */
@@ -23,7 +18,7 @@ public class Shape {
     private Direction direction;
 
     /**
-     *
+     * Asettaa palikalle y ja x koordinaattit, muodon numeron ja listan paloista.
      * @param y
      * @param x
      * @param num
@@ -37,65 +32,36 @@ public class Shape {
         this.direction = RIGHT;
     }
 
-    /**
-     *
-     * @return
-     */
     public int getNum() {
         return num;
     }
 
-    
-    /**
-     *
-     * @return
-     */
     public int getY() {
         return y;
     }
 
-    /**
-     *
-     * @param y
-     */
     public void setY(int y) {
         this.y = y;
     }
 
-    /**
-     *
-     * @return
-     */
     public int getX() {
         return x;
     }
 
-    /**
-     *
-     * @param x
-     */
     public void setX(int x) {
         this.x = x;
     }
 
-    /**
-     *
-     * @return
-     */
     public List<Block> getList() {
         return list;
     }
 
-    /**
-     *
-     * @param list
-     */
     public void setList(List<Block> list) {
         this.list = list;
     }
 
     /**
-     * Liikuttaa palikan kaikkia paloja alas.
+     * Liikuttaa palikan kaikkia paloja alas ja samalla liikuttaa palikan omaa sijaintia.
      */
     public void moveDown() {
         for (Block block : list) {
@@ -105,7 +71,7 @@ public class Shape {
     }
 
     /**
-     * Liikuttaa palikan kaikkia paloja ylös.
+     * Liikuttaa palikan kaikkia paloja ylös ja samalla liikuttaa palikan omaa sijaintia.
      */
     public void moveUp() {
         for (Block block : list) {
@@ -115,7 +81,7 @@ public class Shape {
     }
 
     /**
-     * Liikuttaa palikan kaikkia paloja vasemmalle.
+     * Liikuttaa palikan kaikkia paloja vasemmalle ja samalla liikuttaa palikan omaa sijaintia.
      */
     public void moveLeft() {
         for (Block block : list) {
@@ -125,7 +91,7 @@ public class Shape {
     }
 
     /**
-     * Liikuttaa palikan kaikkia paloja oikealle.
+     * Liikuttaa palikan kaikkia paloja oikealle ja samalla liikuttaa palikan omaa sijaintia.
      */
     public void moveRight() {
         for (Block block : list) {

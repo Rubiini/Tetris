@@ -44,34 +44,18 @@ public class Tetris extends Timer implements ActionListener {
 
     
     
-    /**
-     *
-     * @return
-     */
     public int getWidth() {
         return width;
     }
 
-    /**
-     *
-     * @return
-     */
     public int getHeight() {
         return height;
     }
 
-    /**
-     *
-     * @return
-     */
     public Board getBoard() {
         return board;
     }
 
-    /**
-     *
-     * @return
-     */
     public Shape getShape() {
         return shape;
     }
@@ -83,7 +67,7 @@ public class Tetris extends Timer implements ActionListener {
     /**
      * Estää palikkaa liikkumasta vasemman seinän läpi.
      *
-     * @return
+     * @return palauttaa true jos pala törmää vasempaan seinään
      */
     public boolean collissionWithLeftWall() {
         for (int i = 0; i < 4; i++) {
@@ -97,7 +81,7 @@ public class Tetris extends Timer implements ActionListener {
     /**
      * Estää palikkaa liikkumasta oikean seinän läpi.
      *
-     * @return
+     * @returnpalauttaa true jos pala törmää oikeaan seinään
      */
     public boolean collissionWithRightWall() {
         for (int i = 0; i < 4; i++) {
@@ -110,10 +94,10 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     * Estää palikkaa liikkumasta lattian läpi. Tulevaisuudessa estää myös
+     * Estää palikkaa liikkumasta lattian läpi. Estää myös
      * palikkaa liikkumasta muiden palojen läpi.
      *
-     * @return
+     * @return palauttaa true jos pala törmää lattiaan tai muihin paloihin pelialustalla
      */
     public boolean collissionWithABlockOrFloor() {
         int[][] matrix = board.getBoardMatrix();
@@ -145,20 +129,19 @@ public class Tetris extends Timer implements ActionListener {
         updateTetris();
     }
 
+    /**
+     * Kutsuu shapen metodia shapeCheck().
+     */
     public void shapeCheckCall() {
         shape.shapeCheck();
     }
 
-    /**
-     *
-     * @param update
-     */
     public void setUpdate(Update update) {
         this.update = update;
     }
 
     /**
-     *
+     * Päivittää käyttöliittymän näkymän.
      */
     public void updateTetris() {
         update.update();

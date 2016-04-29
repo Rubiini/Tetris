@@ -1,7 +1,7 @@
 package tetris.blocks;
 
 /**
- * Pala
+ * Block on Shapen yksi ruutu.
  * @author samukaup
  */
 public class Block {
@@ -10,7 +10,7 @@ public class Block {
     private int y;
 
     /**
-     *
+     * Asettaa Blockin koordinaatit.
      * @param y
      * @param x
      */

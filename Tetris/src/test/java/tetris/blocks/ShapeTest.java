@@ -172,7 +172,7 @@ public class ShapeTest {
         }
     }*/
     
-    @Test
+    /*@Test
     public void rotateZWorksCorrectly() {
         for (int i = 0; i < 4; i++) {
             int x = shape.getList().get(i).getX();
@@ -196,5 +196,5 @@ public class ShapeTest {
             }
             
         }
-    }
+    }*/
 }

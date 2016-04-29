@@ -1,13 +1,13 @@
 package tetris.gui;
 
 /**
- * Päivittäjä
+ * Päivittäjä.
  * @author Rubiini
  */
 public interface Update {
 
     /**
-     *
+     * Päivitä metodi aliluokille.
      */
     void update();
 }

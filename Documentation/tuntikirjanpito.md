@@ -17,3 +17,7 @@ P√§iv√§ | Tunnit | Kuvaus
 19.04.2016 | 0.5h | koodailua
 21.04.2016 | 1h | koodausta
 22.04.2016 | 6h | koodausta, dokumentointia, testausta...
+24.04.2016 | 2h | t‰ysien rivien poisto ja palikoiden tiputus ajastimella.
+27.04.2016 | 1h | testej‰
+28.04.2016 | 2h | javadoc jne pikku fixailua 
+29.04.2016 | 8h | javadoc, sekvenssikaaviot, dokumentointia jne...

@@ -11,8 +11,8 @@ public class Block {
 
     /**
      * Asettaa Blockin koordinaatit.
-     * @param y
-     * @param x
+     * @param y Koordinaatti pysty-suunnassa
+     * @param x Koordinaatti leveys-suunnassa
      */
     public Block(int y, int x) {
         this.x = x;

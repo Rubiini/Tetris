@@ -19,10 +19,10 @@ public class Shape {
 
     /**
      * Asettaa palikalle y ja x koordinaattit, muodon numeron ja listan paloista.
-     * @param y
-     * @param x
-     * @param num
-     * @param list
+     * @param y Koordinaatti korkeus-suunnassa
+     * @param x Koordinaatti leveys-suunnassa
+     * @param num Palikan mallin kertova tunniste
+     * @param list Lista palikkaan kuuluvista paloista
      */
     public Shape(int y, int x, int num, List<Block> list) {
         this.y = y;

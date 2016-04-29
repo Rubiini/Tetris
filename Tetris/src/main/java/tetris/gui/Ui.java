@@ -20,10 +20,10 @@ public class Ui implements Runnable {
     private Panel panel;
 
     /**
-     *
-     * @param tetris
-     * @param height
-     * @param width
+     * Ui asettaa paikallisille muuttujille konstruktorille annetut arvot.
+     * @param tetris Tetris pelin logiikka
+     * @param height Korkeus
+     * @param width Leveys
      */
     public Ui(Tetris tetris, int height, int width) {
         this.tetris = tetris;
@@ -48,7 +48,7 @@ public class Ui implements Runnable {
     }
 
     /**
-     *
+     * Luo käyttöliittymän komponentit
      * @param container
      */
     public void createComponents(Container container) {
@@ -58,18 +58,10 @@ public class Ui implements Runnable {
         frame.addKeyListener(listener);
     }
 
-    /**
-     *
-     * @return
-     */
     public JFrame getFrame() {
         return frame;
     }
 
-    /**
-     *
-     * @return
-     */
     public Update getUpdate() {
         return panel;
     }

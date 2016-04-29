@@ -22,9 +22,9 @@ public final class ShapeCreator {
     private int x;
 
     /**
-     *
-     * @param y
-     * @param x
+     * Asetetaan paikallisille muuttujille konstruktorille annetut arvot.
+     * @param y Koordinaatti pysty-suunnassa
+     * @param x Koordinaatti vaaka-suunnassa
      */
     public ShapeCreator(int y, int x) {
         this.x = x;
@@ -34,9 +34,7 @@ public final class ShapeCreator {
 
     /**
      * Luo I palan seuraavasti.
-     *
      * 0 1 2 3
-     *
      * @param y
      * @param x
      * @return
@@ -51,8 +49,9 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo O palan seuraavasti. 0 1 2 3
-     *
+     * Luo O palan seuraavasti. 
+     * 0 1
+     * 2 3
      * @param y
      * @param x
      * @return
@@ -67,8 +66,9 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo S palan seuraavasti. 1 0 2 3
-     *
+     * Luo S palan seuraavasti. 
+     *   1 0
+     * 2 3
      * @param y
      * @param x
      * @return
@@ -83,8 +83,9 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo Z palan seuraavasti. 0 1 2 3
-     *
+     * Luo Z palan seuraavasti. 
+     * 0 1 
+     *   2 3
      * @param y
      * @param x
      * @return
@@ -99,8 +100,9 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo L palan seuraavasti. 0 1 2 3
-     *
+     * Luo L palan seuraavasti. 
+     * 0 1 2 
+     * 3
      * @param y
      * @param x
      * @return
@@ -115,8 +117,9 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo J palan seuraavasti. 0 1 2 3
-     *
+     * Luo J palan seuraavasti. 
+     * 0 1 2 
+     *     3
      * @param y
      * @param x
      * @return
@@ -131,8 +134,9 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo T palan seuraavasti. 0 1 2 3
-     *
+     * Luo T palan seuraavasti. 
+     * 0 1 2 
+     *   3
      * @param y
      * @param x
      * @return
@@ -157,9 +161,9 @@ public final class ShapeCreator {
     }
 
     /**
-     * Luo uuden palan.
+     * Arpoo numeron, jonka perusteella seuraavan palikan malli päätetään ja luodaan.
      *
-     * @return
+     * @return palauttaa uuden palan arvotun numeron perusteella. Ei pitäisi ikinä palauttaa null.
      */
     public Shape newShape() {
         int number = random.nextInt(7);

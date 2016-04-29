@@ -14,9 +14,9 @@ public class Listener implements KeyListener {
     private Tetris tetris;
     
     /**
-     * Näppäimistökuuntelija
-     * @param shape
-     * @param tetris
+     * Näppäimistökuuntelija asettaa paikallisille muuttujille konstrukktorille annetut arvot.
+     * @param shape Palikka muuttuja
+     * @param tetris Pelin logiikka muuttuja
      */
     public Listener(Shape shape, Tetris tetris) {
         this.shape = shape;

@@ -14,3 +14,7 @@ Pelaaja
 
 ## Luokkakaavio
 ![Luokkakaavio](/Documentation/Luokkakaavio.png)
+
+## Sekvenssikaaviot
+![Sekvenssi1](/Documentation/Sekvenssi1.png)
+![Sekvenssi2](/Documentation/Sekvenssi2.png)

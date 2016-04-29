@@ -22,10 +22,10 @@ public class Panel extends JPanel implements Update {
     private int heightSize;
 
     /**
-     *
-     * @param tetris
-     * @param heightSize
-     * @param widthSize
+     * Panel asettaa paikallisille muuttujille konstruktorille annetut arvot.
+     * @param tetris Tetris pelin logiikkka
+     * @param heightSize Koko pysty-suunnassa
+     * @param widthSize Koko vaaka-suunnassa
      */
     public Panel(Tetris tetris, int heightSize, int widthSize) {
         this.tetris = tetris;
@@ -56,7 +56,7 @@ public class Panel extends JPanel implements Update {
     }
 
     /**
-     *
+     * Päivittää käyttöliittymän näkymän, eli maalaa palat uudestaan.
      */
     @Override
     public void update() {

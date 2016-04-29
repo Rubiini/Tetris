@@ -16,7 +16,6 @@ import tetris.gui.Update;
  * @author samukaup
  */
 public class Tetris extends Timer implements ActionListener {
-
     private int width;
     private int height;
     private ShapeCreator creator;
@@ -26,9 +25,9 @@ public class Tetris extends Timer implements ActionListener {
     private Update update;
 
     /**
-     *
-     * @param height
-     * @param width
+     * Tetris asettaa paikallisille muuttujille konstruktorille annetut arvot ja alustaa muut muuttujat.
+     * @param height Korkeus koordinaatti
+     * @param width Leveys koordinaatti
      */
     public Tetris(int height, int width) {
         super(500, null);
@@ -41,8 +40,6 @@ public class Tetris extends Timer implements ActionListener {
         addActionListener(this);
         setInitialDelay(0);
     }
-
-    
     
     public int getWidth() {
         return width;
@@ -63,6 +60,10 @@ public class Tetris extends Timer implements ActionListener {
     public boolean isRunning() {
         return running;
     }
+    
+    public void setUpdate(Update update) {
+        this.update = update;
+    }
 
     /**
      * Estää palikkaa liikkumasta vasemman seinän läpi.
@@ -81,7 +82,7 @@ public class Tetris extends Timer implements ActionListener {
     /**
      * Estää palikkaa liikkumasta oikean seinän läpi.
      *
-     * @returnpalauttaa true jos pala törmää oikeaan seinään
+     * @return palauttaa true jos pala törmää oikeaan seinään
      */
     public boolean collissionWithRightWall() {
         for (int i = 0; i < 4; i++) {
@@ -136,10 +137,6 @@ public class Tetris extends Timer implements ActionListener {
         shape.shapeCheck();
     }
 
-    public void setUpdate(Update update) {
-        this.update = update;
-    }
-
     /**
      * Päivittää käyttöliittymän näkymän.
      */
@@ -153,7 +150,6 @@ public class Tetris extends Timer implements ActionListener {
     public void moveDown() {
         shape.moveDown();
         collissionWithABlockOrFloor();
-        
     }
 
     /**

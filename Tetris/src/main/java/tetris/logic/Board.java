@@ -15,9 +15,9 @@ public class Board {
     private int width;
 
     /**
-     *
-     * @param y
-     * @param x
+     * Board asettaa paikallisille muuttujille konstruktorille annetut arvot.
+     * @param y Koordinaatti korkeus-suunnassa
+     * @param x Koordinaatti leveys-suunnassa
      */
     public Board(int y, int x) {
         this.height = y;
@@ -25,18 +25,14 @@ public class Board {
         this.boardMatrix = new int[y + 1][x + 1];
     }
 
-    /**
-     *
-     * @return
-     */
     public int[][] getBoardMatrix() {
         return boardMatrix;
     }
 
     /**
-     * Lisää palikan kaikki palat taulukkoon.
+     * Lisää palikan kaikki palat oikeaan kohtaan pelikentällä.
      *
-     * @param shape
+     * @param shape Viimeisin pelikentällä pudonnut palikka.
      */
     public void addToBoardMatrix(Shape shape) {
         for (Block block : shape.getList()) {
@@ -48,9 +44,9 @@ public class Board {
     }
 
     /**
-     * Poistaa täyden rivin.
+     * Poistaa täydet rivit pelikentältä.
      *
-     * @return
+     * @return Palauttaa false jos mikään rivi pelikkentällä ei ole täysi
      */
     public boolean deleteFullRows() {
         for (int y = 0; y < height; y++) {
@@ -68,8 +64,9 @@ public class Board {
     }
 
     /**
-     *
-     * @param y
+     * Poistaa yhden täyden rivin pelikentältä.
+     * 
+     * @param y kertoo poistettavan rivin koordinaatin
      */
     public void deleteRow(int y) {
         for (int x = 0; x < width; x++) {
@@ -78,6 +75,11 @@ public class Board {
         dropRow(y - 1);
     }
 
+    /**
+     * Pudottaa yllä olevat rivit alemmas poistettujen rivien tilalle.
+     * 
+     * @param y kertoo pudotettavan rivin koordinaatin
+     */
     public void dropRow(int y) {
         for (int i = 0; i <= y; y--) {
             for (int x = 0; x < 10; x++) {
@@ -89,18 +91,10 @@ public class Board {
         }
     }
 
-    /**
-     *
-     * @return
-     */
     public int getCurY() {
         return height;
     }
 
-    /**
-     *
-     * @return
-     */
     public int getCurX() {
         return width;
     }

@@ -222,6 +222,6 @@ public class TetrisTest {
     @Test
     public void updateWorksCorrectly() {
         tetris.updateTetris();
-        update.update();
+        assertTrue(update instanceof Panel);
     }
 }

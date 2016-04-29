@@ -2,8 +2,8 @@
 Javalabra projekti
 
 ####Aiheen kuvaus
-Tetris. Peli, jossa on tarkoituksena ker‰t‰ pisteit‰ muodostamalla putoavista palikoista vaakarivej‰.
-Pelaaja voi liikuttaa palikoita k‰‰nt‰m‰ll‰, sek‰ liikuttamalla vasemmalle tai oikealle nuolin‰pp‰imill‰.
+Tetris. Peli, jossa on tarkoituksena ker√§t√§ pisteit√§ muodostamalla putoavista palikoista vaakarivej√§.
+Pelaaja voi liikuttaa palikoita k√§√§nt√§m√§ll√§, sek√§ liikuttamalla vasemmalle tai oikealle nuolin√§pp√§imill√§.
 
 ## Dokumentaatio
 [Linkki dokumentaatioon](Documentation/)
@@ -12,8 +12,8 @@ Pelaaja voi liikuttaa palikoita k‰‰nt‰m‰ll‰, sek‰ liikuttamalla vasemmalle tai o
 
 [tunti kirjanpito](Documentation/tuntikirjanpito.md)
 
--[Kayttoohje](Documentation/kayttoohje.txt)
- -
- -[Pit raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/pit/201604151716/index.html)
+[Kayttoohje](Documentation/kayttoohje.txt)
+
+[Pit raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/pit/201604292320/index.html)
 
 [Checkstyle raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/site/checkstyle.html)

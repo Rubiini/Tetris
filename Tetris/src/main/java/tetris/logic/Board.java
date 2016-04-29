@@ -1,4 +1,7 @@
-package tetris.blocks;
+package tetris.logic;
+
+import tetris.blocks.Block;
+import tetris.blocks.Shape;
 
 /**
  * Pelialusta.

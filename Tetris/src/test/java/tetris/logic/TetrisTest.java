@@ -14,7 +14,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import tetris.blocks.Block;
-import tetris.blocks.Board;
 import tetris.blocks.Shape;
 import tetris.blocks.ShapeCreator;
 import tetris.gui.Panel;
@@ -218,5 +217,11 @@ public class TetrisTest {
                 }
             }
         }
+    }
+    
+    @Test
+    public void updateWorksCorrectly() {
+        tetris.updateTetris();
+        update.update();
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Random;
 import javax.swing.JPanel;
 import tetris.blocks.Block;
-import tetris.blocks.Board;
+import tetris.logic.Board;
 import tetris.blocks.Shape;
 import tetris.logic.Tetris;
 

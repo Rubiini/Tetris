@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.Timer;
 import tetris.blocks.Block;
-import tetris.blocks.Board;
 import tetris.blocks.Shape;
 import tetris.blocks.ShapeCreator;
 import tetris.gui.Update;

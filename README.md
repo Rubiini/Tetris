@@ -12,7 +12,7 @@ Pelaaja voi liikuttaa palikoita kääntämällä, sekä liikuttamalla vasemmalle
 
 [tunti kirjanpito](Documentation/tuntikirjanpito.md)
 
-[Kayttoohje](Documentation/kayttoohje.txt)
+[kayttoohje](Documentation/kayttoohje.md)
 
 [testaus](Documentation/testausdokumentaatio.md)
 

@@ -159,7 +159,7 @@ public final class ShapeCreator {
         List<Block> list = new ArrayList<>();
         return list;
     }
-
+ 
     /**
      * Arpoo numeron, jonka perusteella seuraavan palikan malli päätetään ja luodaan.
      *

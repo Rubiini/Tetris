@@ -2,20 +2,17 @@ package tetris.logic;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.Timer;
-import tetris.blocks.Block;
 import tetris.blocks.Shape;
 import tetris.blocks.ShapeCreator;
 import tetris.gui.Update;
 
 /**
  * Pelin logiikasta vastaava luokka.
- *
  * @author samukaup
  */
 public class Tetris extends Timer implements ActionListener {
+
     private int width;
     private int height;
     private ShapeCreator creator;
@@ -25,7 +22,8 @@ public class Tetris extends Timer implements ActionListener {
     private Update update;
 
     /**
-     * Tetris asettaa paikallisille muuttujille konstruktorille annetut arvot ja alustaa muut muuttujat.
+     * Tetris asettaa paikallisille muuttujille konstruktorille annetut arvot ja
+     * alustaa muut muuttujat.
      * @param height Korkeus koordinaatti
      * @param width Leveys koordinaatti
      */
@@ -40,7 +38,7 @@ public class Tetris extends Timer implements ActionListener {
         addActionListener(this);
         setInitialDelay(0);
     }
-    
+
     public int getWidth() {
         return width;
     }
@@ -60,19 +58,18 @@ public class Tetris extends Timer implements ActionListener {
     public boolean isRunning() {
         return running;
     }
-    
+
     public void setUpdate(Update update) {
         this.update = update;
     }
 
     /**
      * Estää palikkaa liikkumasta vasemman seinän läpi.
-     *
      * @return palauttaa true jos pala törmää vasempaan seinään
      */
     public boolean collissionWithLeftWall() {
         for (int i = 0; i < 4; i++) {
-            if (shape.getList().get(i).getX() < 0) {
+            if (shape.getList().get(i).getX() <= 0) {
                 return true;
             }
         }
@@ -81,7 +78,6 @@ public class Tetris extends Timer implements ActionListener {
 
     /**
      * Estää palikkaa liikkumasta oikean seinän läpi.
-     *
      * @return palauttaa true jos pala törmää oikeaan seinään
      */
     public boolean collissionWithRightWall() {
@@ -95,16 +91,15 @@ public class Tetris extends Timer implements ActionListener {
     }
 
     /**
-     * Estää palikkaa liikkumasta lattian läpi. Estää myös
-     * palikkaa liikkumasta muiden palojen läpi.
-     *
-     * @return palauttaa true jos pala törmää lattiaan tai muihin paloihin pelialustalla
+     * Estää palikkaa liikkumasta lattian läpi. Estää myös palikkaa liikkumasta
+     * muiden palojen läpi.
+     * @return palauttaa true jos pala törmää lattiaan tai muihin paloihin
+     * pelialustalla
      */
     public boolean collissionWithABlockOrFloor() {
         int[][] matrix = board.getBoardMatrix();
         for (int i = 0; i < 4; i++) {
-            if (shape.getList().get(i).getY() > height) {
-                this.moveUp();
+            if (shape.getList().get(i).getY() >= height) {
                 this.moveUp();
                 board.addToBoardMatrix(shape);
                 shape = creator.newShape();
@@ -126,7 +121,9 @@ public class Tetris extends Timer implements ActionListener {
         if (!running) {
             return;
         }
+        newGame();
         moveDown();
+        getScore();
         updateTetris();
     }
 
@@ -178,4 +175,20 @@ public class Tetris extends Timer implements ActionListener {
         collissionWithRightWall();
         updateTetris();
     }
+
+    /**
+     * Aloittaa uuden pelin, kun edellinen peli on ohi.
+     */
+    public void newGame() {
+        int[][] matrix = board.getBoardMatrix();
+        if (matrix[1][5] == 1) { 
+            board.initializeBoardMatrix();
+            board.resetScore();
+        }
+    }
+
+    public int getScore() {
+        return board.getScore();
+    }
+    
 }

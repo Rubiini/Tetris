@@ -12,8 +12,10 @@ Pelaaja voi liikuttaa palikoita k‰‰nt‰m‰ll‰, sek‰ liikuttamalla vasemmalle tai o
 
 [tunti kirjanpito](Documentation/tuntikirjanpito.md)
 
--[Kayttoohje](Documentation/kayttoohje.txt)
- -
- -[Pit raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/pit/201604151716/index.html)
+[Kayttoohje](Documentation/kayttoohje.txt)
+
+[testaus](Documentation/testausdokumentaatio.md)
+
+[Pit raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/pit/201605082246/index.html)
 
 [Checkstyle raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/site/checkstyle.html)

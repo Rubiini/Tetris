@@ -13,6 +13,7 @@ public class Board {
     private int[][] boardMatrix;
     private int height;
     private int width;
+    private int score;
 
     /**
      * Board asettaa paikallisille muuttujille konstruktorille annetut arvot.
@@ -20,6 +21,7 @@ public class Board {
      * @param x Koordinaatti leveys-suunnassa
      */
     public Board(int y, int x) {
+        this.score = 0;
         this.height = y;
         this.width = x;
         this.boardMatrix = new int[y + 1][x + 1];
@@ -27,6 +29,25 @@ public class Board {
 
     public int[][] getBoardMatrix() {
         return boardMatrix;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    /**
+     * Asettaa pistemuuttujalle uuden arvon.
+     * @param score 
+     */
+    public void setScore(int score) {
+        this.score += score;
+    }
+
+    /**
+     * Nollaa pisteet kun uusi peli alkaa.
+     */
+    public void resetScore() {
+        this.score = 0;
     }
 
     /**
@@ -57,6 +78,7 @@ public class Board {
                 }
                 if (howMany == width) {
                     deleteRow(y);
+                    setScore(100);
                 }
             }
         }
@@ -90,12 +112,15 @@ public class Board {
             }
         }
     }
-
-    public int getCurY() {
-        return height;
-    }
-
-    public int getCurX() {
-        return width;
+    
+    /**
+     * Tyhjentää pelialusta.
+     */
+    public void initializeBoardMatrix() {
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                boardMatrix[y][x] = 0;
+            }
+        }
     }
 }

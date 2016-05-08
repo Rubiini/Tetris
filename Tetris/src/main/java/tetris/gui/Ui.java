@@ -8,7 +8,7 @@ import javax.swing.WindowConstants;
 import tetris.logic.Tetris;
 
 /**
- *
+ * Käyttöliittymä luokkka, joka luo pelin komponentit.
  * @author Rubiini
  */
 public class Ui implements Runnable {

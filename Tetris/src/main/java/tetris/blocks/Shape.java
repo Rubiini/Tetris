@@ -16,6 +16,8 @@ public class Shape {
     private int num;
     private List<Block> list;
     private Direction direction;
+    
+    //abstract public void rotate(Direction direction, int y, int x);
 
     /**
      * Asettaa palikalle y ja x koordinaattit, muodon numeron ja listan paloista.
@@ -180,16 +182,6 @@ public class Shape {
      */
     public void rotateZ() {
         if (direction == RIGHT || direction == LEFT) {
-            this.getList().get(0).setX(x + 0);
-            this.getList().get(0).setY(y + 0);
-            this.getList().get(1).setX(x + 1);
-            this.getList().get(1).setY(y + 0);
-            this.getList().get(2).setX(x + 1);
-            this.getList().get(2).setY(y + 1);
-            this.getList().get(3).setX(x + 2);
-            this.getList().get(3).setY(y + 1);
-            direction = UP;
-        } else {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y + 0);
             this.getList().get(1).setX(x + 1);
@@ -198,6 +190,16 @@ public class Shape {
             this.getList().get(2).setY(y + 1);
             this.getList().get(3).setX(x + 0);
             this.getList().get(3).setY(y + 2);
+            direction = UP;
+        } else {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 0);
+            this.getList().get(2).setX(x + 1);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 1);
             direction = RIGHT;
         }
     }
@@ -207,16 +209,6 @@ public class Shape {
      */
     public void rotateL() {
         if (direction == RIGHT) {
-            this.getList().get(0).setX(x + 0);
-            this.getList().get(0).setY(y + 1);
-            this.getList().get(1).setX(x + 1);
-            this.getList().get(1).setY(y + 1);
-            this.getList().get(2).setX(x + 2);
-            this.getList().get(2).setY(y + 1);
-            this.getList().get(3).setX(x + 0);
-            this.getList().get(3).setY(y + 2);
-            direction = UP;
-        } else if (direction == UP) {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y + 2);
             this.getList().get(1).setX(x + 1);
@@ -225,8 +217,8 @@ public class Shape {
             this.getList().get(2).setY(y + 0);
             this.getList().get(3).setX(x + 2);
             this.getList().get(3).setY(y + 2);
-            direction = LEFT;
-        } else if (direction == LEFT) {
+            direction = UP;
+        } else if (direction == UP) {
             this.getList().get(0).setX(x + 2);
             this.getList().get(0).setY(y + 1);
             this.getList().get(1).setX(x + 1);
@@ -235,8 +227,8 @@ public class Shape {
             this.getList().get(2).setY(y + 1);
             this.getList().get(3).setX(x + 2);
             this.getList().get(3).setY(y + 0);
-            direction = DOWN;
-        } else {
+            direction = LEFT;
+        } else if (direction == LEFT) {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y + 0);
             this.getList().get(1).setX(x + 1);
@@ -245,6 +237,16 @@ public class Shape {
             this.getList().get(2).setY(y + 2);
             this.getList().get(3).setX(x + 0);
             this.getList().get(3).setY(y + 0);
+            direction = DOWN;
+        } else {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 1);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 0);
+            this.getList().get(3).setY(y + 2);
             direction = RIGHT;
         }
     }
@@ -254,16 +256,6 @@ public class Shape {
      */
     public void rotateJ() {
         if (direction == RIGHT) {
-            this.getList().get(0).setX(x + 0);
-            this.getList().get(0).setY(y + 0);
-            this.getList().get(1).setX(x + 1);
-            this.getList().get(1).setY(y + 0);
-            this.getList().get(2).setX(x + 2);
-            this.getList().get(2).setY(y + 0);
-            this.getList().get(3).setX(x + 2);
-            this.getList().get(3).setY(y + 1);
-            direction = UP;
-        } else if (direction == UP) {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y + 2);
             this.getList().get(1).setX(x + 1);
@@ -272,8 +264,8 @@ public class Shape {
             this.getList().get(2).setY(y + 0);
             this.getList().get(3).setX(x + 2);
             this.getList().get(3).setY(y + 0);
-            direction = LEFT;
-        } else if (direction == LEFT) {
+            direction = UP;
+        } else if (direction == UP) {
             this.getList().get(0).setX(x + 2);
             this.getList().get(0).setY(y + 1);
             this.getList().get(1).setX(x + 1);
@@ -282,8 +274,8 @@ public class Shape {
             this.getList().get(2).setY(y + 1);
             this.getList().get(3).setX(x + 0);
             this.getList().get(3).setY(y + 0);
-            direction = DOWN;
-        } else {
+            direction = LEFT;
+        } else if (direction == LEFT) {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y + 0);
             this.getList().get(1).setX(x + 1);
@@ -292,6 +284,16 @@ public class Shape {
             this.getList().get(2).setY(y + 2);
             this.getList().get(3).setX(x + 0);
             this.getList().get(3).setY(y + 2);
+            direction = DOWN;
+        } else {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 0);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 0);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 0);
+            this.getList().get(3).setX(x + 2);
+            this.getList().get(3).setY(y + 1);
             direction = RIGHT;
         }
     }
@@ -301,16 +303,6 @@ public class Shape {
      */
     public void rotateT() {
         if (direction == RIGHT) {
-            this.getList().get(0).setX(x + 0);
-            this.getList().get(0).setY(y + 1);
-            this.getList().get(1).setX(x + 1);
-            this.getList().get(1).setY(y + 1);
-            this.getList().get(2).setX(x + 2);
-            this.getList().get(2).setY(y + 1);
-            this.getList().get(3).setX(x + 1);
-            this.getList().get(3).setY(y + 2);
-            direction = UP;
-        } else if (direction == UP) {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y + 2);
             this.getList().get(1).setX(x + 1);
@@ -319,8 +311,8 @@ public class Shape {
             this.getList().get(2).setY(y + 0);
             this.getList().get(3).setX(x + 2);
             this.getList().get(3).setY(y + 1);
-            direction = LEFT;
-        } else if (direction == LEFT) {
+            direction = UP;
+        } else if (direction == UP) {
             this.getList().get(0).setX(x + 0);
             this.getList().get(0).setY(y + 1);
             this.getList().get(1).setX(x + 1);
@@ -329,8 +321,8 @@ public class Shape {
             this.getList().get(2).setY(y + 1);
             this.getList().get(3).setX(x + 1);
             this.getList().get(3).setY(y + 0);
-            direction = DOWN;
-        } else {
+            direction = LEFT;
+        } else if (direction == LEFT) {
             this.getList().get(0).setX(x + 1);
             this.getList().get(0).setY(y + 2);
             this.getList().get(1).setX(x + 1);
@@ -339,6 +331,16 @@ public class Shape {
             this.getList().get(2).setY(y + 0);
             this.getList().get(3).setX(x + 0);
             this.getList().get(3).setY(y + 1);
+            direction = DOWN;
+        } else {
+            this.getList().get(0).setX(x + 0);
+            this.getList().get(0).setY(y + 1);
+            this.getList().get(1).setX(x + 1);
+            this.getList().get(1).setY(y + 1);
+            this.getList().get(2).setX(x + 2);
+            this.getList().get(2).setY(y + 1);
+            this.getList().get(3).setX(x + 1);
+            this.getList().get(3).setY(y + 2);
             direction = RIGHT;
         }
     }

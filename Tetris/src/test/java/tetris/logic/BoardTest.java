@@ -61,26 +61,20 @@ public class BoardTest {
         }
     }
 
-    /*@Test
+    @Test
     public void dropRowWorksCorrectly() {
         List<Block> list = new ArrayList<Block>();
-        List<Block> list2 = new ArrayList<Block>();
-        int[][] matrix = board.getBoardMatrix();
-        for (int i = 0; i < 10; i++) {
-            list.add(new Block(1, i));
-            if (i > 0) list2.add(new Block(0, i));
+        for (int i = 1; i < 10; i++) {
+            list.add(new Block(4, i));
         }
         Shape s = new Shape(0, 0, 0, list);
         board.addToBoardMatrix(s);
-        s = new Shape(0,0,0,list2);
-        board.addToBoardMatrix(shape);
-        board.deleteFullRows();
-        matrix = board.getBoardMatrix();
-        assertEquals(matrix[1][0], 0);
+        board.dropRow(4);
+        int[][] matrix = board.getBoardMatrix();
         for (int i = 1; i < 10; i++) {
-            assertEquals(matrix[1][i], 1);
+            assertEquals(1, matrix[5][i]);
         }
-    }*/
+    }
 
     @Test
     public void deleteFullRowWorksCorrectly() {
@@ -97,5 +91,38 @@ public class BoardTest {
             assertEquals(matrix[1][i], 0);
         }
     }
-
+    
+    @Test
+    public void initializeBoardMatrixWorksCorrectly() {
+        board.addToBoardMatrix(shape);
+        board.initializeBoardMatrix();
+        int[][] matrix = board.getBoardMatrix();
+        for (int y = 0; y < 21; y++) {
+            for (int x = 0; x < 10; x++) {
+                assertEquals(0, matrix[y][x]);
+            }
+        }
+    }
+    
+    @Test
+    public void getScoreWorksCorrectly() {
+        int score = board.getScore();
+        assertEquals(0, score);
+    }
+    
+    @Test
+    public void setScoreWorksCorrectly() {
+        board.setScore(5);
+        int score = board.getScore();
+        assertEquals(5, score);
+    }
+    
+    @Test
+    public void resetScoreWorksCorrectly() {
+        board.setScore(5);
+        board.resetScore();
+        int score = board.getScore();
+        assertEquals(0, score);
+    }
+    
 }

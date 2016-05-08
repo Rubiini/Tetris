@@ -16,6 +16,8 @@ Pelaaja voi liikuttaa palikoita kääntämällä, sekä liikuttamalla vasemmalle
 
 [testaus dokumentaatio](Documentation/testausdokumentaatio.md)
 
+[rakennekuvaus](Documentation/rakennekuvaus.md)
+
 [Pit raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/pit/201605082246/index.html)
 
 [Checkstyle raportti: ](https://htmlpreview.github.io/?https://github.com/Rubiini/Tetris/blob/master/Documentation/site/checkstyle.html)

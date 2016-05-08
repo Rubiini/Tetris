@@ -21,3 +21,5 @@ P√§iv√§ | Tunnit | Kuvaus
 27.04.2016 | 1h | testej‰
 28.04.2016 | 2h | javadoc jne pikku fixailua 
 29.04.2016 | 8h | javadoc, sekvenssikaaviot, dokumentointia jne...
+07.05.2016 | 3h | Score lis‰tty ja yritetty tehd‰ muutoksia shape luokalle
+08.05.2016 | 7h | Dokumentaatiota, testej‰ ja viimeistely‰ palautusta varten

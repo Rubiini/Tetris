@@ -1,0 +1,5 @@
+Tetris pelin käyttöohje.
+
+Käynnistä peli Jar tiedostolla. Pelissä liikutetaan palaa nuolinäppäimillä oikealle, vasemmalle tai alas ja pyöritetään painamalla nuolinäppäintä ylös.
+Yritä muodostaa vaaka rivejä putoavista palikoista. Täydet vaakarivit poistuvat ja yllä olevat palikat putoavat alas vapauttaen pelitilaa. 
+Lopeta peli sammuttamalla ohjelma.

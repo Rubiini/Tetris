@@ -17,7 +17,6 @@ import tetris.logic.Tetris;
  * @author Rubiini
  */
 public class Panel extends JPanel implements Update {
-
     private Tetris tetris;
     private int widthSize;
     private int heightSize;
